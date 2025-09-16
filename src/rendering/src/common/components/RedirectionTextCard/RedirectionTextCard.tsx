@@ -1,17 +1,7 @@
 'use client';
 
-import { Field, Link, LinkField, Text } from '@sitecore-jss/sitecore-jss-nextjs';
-import { ComponentProps } from 'services/sitecore/component-props';
-
-type RedirectionTextCardProps = ComponentProps & {
-  fields: {
-    heading: Field<string>;
-    description: Field<string>;
-    img: Field<string>;
-    btnText?: Field<string>;
-    btnLink: LinkField;
-  };
-};
+import { Link, Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { RedirectionTextCardProps } from './RedirectionTextCard.types';
 
 const RedirectionTextCard = (props: RedirectionTextCardProps): JSX.Element => {
   return (

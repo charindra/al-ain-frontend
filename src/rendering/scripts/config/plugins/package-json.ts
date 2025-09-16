@@ -1,4 +1,4 @@
-import { JssConfig } from 'lib/config';
+import { JssConfig } from 'services/sitecore/config';
 import { ConfigPlugin } from '..';
 import packageConfig from 'package.json';
 

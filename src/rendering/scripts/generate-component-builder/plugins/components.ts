@@ -24,7 +24,14 @@ class ComponentsPlugin implements ComponentBuilderPlugin {
      */
     const componentRoots = ['src/common/components', 'src/features'];
 
-    config.components = componentRoots.flatMap((root) => getComponentList(root));
+    config.components = componentRoots
+      .flatMap((root) => getComponentList(root))
+      .filter((component) => {
+        const path = 'path' in component ? (component as { path: string }).path : '';
+        const moduleName = 'moduleName' in component ? component.moduleName : '';
+
+        return !moduleName?.toLowerCase().includes('index') && !/\/index\.[tj]sx?$/.test(path);
+      });
 
     return config;
   }

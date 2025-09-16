@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeadingText from '../HeadingText';
+import HeadingText from 'common/components/HeadingText';
 
 interface Item {
   subHeading?: string;

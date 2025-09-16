@@ -1,37 +1,11 @@
 'use client';
 
-import {
-  Field,
-  ImageField,
-  Link,
-  LinkField,
-  NextImage,
-  RichText,
-  Text,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+import { Link, NextImage, RichText, Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import { motion } from 'framer-motion';
-import { ComponentProps } from 'services/sitecore/component-props';
-
-const data = {
-  img: '/images/explore-banner.png',
-  shadeColor: '#94442E',
-  mobileImage: '/images/galleries-colletions-banner-mob.png',
-};
-
-type TitleAndTextBgBannerProps = ComponentProps & {
-  fields: {
-    heading: Field<string>;
-    description: Field<string>;
-    ctaButton: LinkField;
-    desktopImage: ImageField;
-    mobileImage: ImageField;
-  };
-};
-
-// const TitleAndTextBgBanner = (props: TitleAndTextBgBannerProps): JSX.Element => {
+import { TITLE_AND_TEXT_BG_BANNER_THEME } from './TitleAndTextBgBanner.constants';
+import { TitleAndTextBgBannerProps } from './TitleAndTextBgBanner.types';
 
 const TitleAndTextBgBanner = (props: TitleAndTextBgBannerProps): JSX.Element => {
-  console.log('TitleAndTextBgBanner props', props);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -62,7 +36,7 @@ const TitleAndTextBgBanner = (props: TitleAndTextBgBannerProps): JSX.Element => 
             <div className="w-full md:w-[50%] text-wrap">
               <div
                 className="shape-1 hidden md:block"
-                style={{ backgroundColor: data.shadeColor }}
+                style={{ backgroundColor: TITLE_AND_TEXT_BG_BANNER_THEME.shadeColor }}
               />
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -83,7 +57,7 @@ const TitleAndTextBgBanner = (props: TitleAndTextBgBannerProps): JSX.Element => 
 
               <div
                 className="shape-2 hidden md:block"
-                style={{ backgroundColor: data.shadeColor }}
+                style={{ backgroundColor: TITLE_AND_TEXT_BG_BANNER_THEME.shadeColor }}
               />
             </div>
             <div className="w-full md:w-[50%] max-w-[628px]">
@@ -121,12 +95,14 @@ const TitleAndTextBgBanner = (props: TitleAndTextBgBannerProps): JSX.Element => 
               </motion.div>
             </div>
 
-            <div className="shape-3 hidden md:block" style={{ backgroundColor: data.shadeColor }} />
+            <div
+              className="shape-3 hidden md:block"
+              style={{ backgroundColor: TITLE_AND_TEXT_BG_BANNER_THEME.shadeColor }}
+            />
           </div>
         </div>
 
         <div className="block md:hidden relative bg-[#94442E]">
-          {/* Diagonal attachment shape */}
           <div
             className="absolute top-[-42px] left-0 right-0 bg-[#94442E] h-[136px]"
             style={{ transform: 'skewY(calc(-8deg * -1))' }}

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ComponentProps } from 'services/sitecore/component-props';
 import Image from 'next/image';
 import Link from 'next/link';
-import UnderlineHeading from '../UnderlineHeading';
+import UnderlineHeading from '../../../../common/components/UnderlineHeading';
 import EventCard from './EventCard';
 
 const eventData = [

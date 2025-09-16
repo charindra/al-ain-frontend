@@ -20,7 +20,7 @@ import { TextField } from '@mui/material';
 import clsx from 'clsx';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import HeadingText from '../HeadingText';
+import HeadingText from 'common/components/HeadingText';
 
 interface FormValues {
   fullName: string;

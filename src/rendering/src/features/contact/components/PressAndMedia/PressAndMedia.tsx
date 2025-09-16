@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import HeadingText from '../HeadingText';
+import HeadingText from 'common/components/HeadingText';
 
 // type PressAndMediaProps = {
 //   heading?: string;

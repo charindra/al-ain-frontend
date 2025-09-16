@@ -1,4 +1,4 @@
-import { useTheme } from '../../context/theme-context';
+import { useTheme } from 'common/components/commonHooks/useTheme';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Autoplay, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import UnderlineHeading from '../UnderlineHeading';
+import UnderlineHeading from '../../../../common/components/UnderlineHeading';
 
 const data = [
   {

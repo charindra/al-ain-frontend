@@ -1,18 +1,9 @@
 'use client';
 
-import { Field, ImageField, Text } from '@sitecore-jss/sitecore-jss-nextjs';
-import { ComponentProps } from 'services/sitecore/component-props';
-
-type PageBannerProps = ComponentProps & {
-  fields: {
-    image: ImageField;
-    title: Field<string>;
-  };
-};
+import { Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { PageBannerProps } from './PageBanner.types';
 
 const PageBanner = (props: PageBannerProps): JSX.Element => {
-  console.log('Banner props', props);
-
   return (
     <div className="pt-[99px] lg:pt-[135px]">
       <div

@@ -1,9 +1,9 @@
 'use client';
 
-import UnderlineHeading from './UnderlineHeading';
+import UnderlineHeading from 'common/components/UnderlineHeading';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { motion } from 'framer-motion';
-import Heading from './HeadingText';
+import Heading from 'common/components/HeadingText';
 
 const data = [
   {

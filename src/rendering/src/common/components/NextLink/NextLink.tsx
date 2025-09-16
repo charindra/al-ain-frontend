@@ -1,55 +1,32 @@
-import { Link, LinkField, LinkFieldValue, Field } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Link } from '@sitecore-jss/sitecore-jss-nextjs';
+import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import { default as NextjsLink } from 'next/link';
 import { useI18n } from 'next-localization';
-import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
-
-type LinkCustomizations = {
-  noFollow?: Field<boolean>;
-};
-
-type NextLinkProps = {
-  field: LinkField | LinkFieldValue | undefined | null;
-  editable?: boolean;
-  role?: string;
-  className?: string;
-  children?: React.ReactNode;
-  placeholder?: string;
-  hideText?: boolean;
-  ariaLabel?: string;
-  id?: string;
-  onClick?: () => void;
-  linkCustomizations?: LinkCustomizations;
-};
-
-type LinkFieldJsonValue = {
-  [key: string]: string;
-};
+import {
+  buildRelText,
+  composeClassName,
+  extractLinkValue,
+  getCanonicalLink,
+  resolveHref,
+  shouldOpenModal,
+} from './NextLink.utils';
+import { LinkFieldJsonValue, NextLinkProps } from './NextLink.types';
 
 const NextLink = (props: NextLinkProps): JSX.Element => {
   const editorActive = isEditorActive();
   const { locale } = useI18n();
   const noFollow = props.linkCustomizations?.noFollow?.value;
-  const link = props?.field?.value as LinkFieldJsonValue;
-  const canonicalLink = `${process.env.PUBLIC_URL}${link?.href}`;
-  const hideText = props.hideText ? props.hideText : false;
+  const link: LinkFieldJsonValue | undefined = extractLinkValue(props.field);
+  const canonicalLink = getCanonicalLink(link);
+  const hideText = props.hideText ?? false;
+
   if (props.field == null) {
     return <></>;
   }
 
-  let relText = '';
-  if (link?.linktype === 'internal' && !noFollow) {
-    relText += 'follow';
-  } else if (noFollow) {
-    relText += 'nofollow';
-  }
-
-  const cssClasses = props.className + (link?.class?.length > 0 ? ' ' + link?.class : '');
-
-  const modalPopup = link?.linktype === 'anchor' && link?.anchor.startsWith('rte-modal-');
-  const getModalUrl = (): string => {
-    const modalId = link?.anchor?.replace('rte-modal-', '');
-    return modalId ? `javascript:openClientModal('${modalId}')` : canonicalLink;
-  };
+  const relText = buildRelText(link, noFollow);
+  const cssClasses = composeClassName(props.className, link?.class);
+  const modalPopup = shouldOpenModal(link);
 
   return (
     <>
@@ -62,16 +39,7 @@ const NextLink = (props: NextLinkProps): JSX.Element => {
       )}
       {!editorActive && link && link?.href != '' && (
         <NextjsLink
-          href={
-            link?.linktype === 'external' ||
-            link?.linktype === 'media' ||
-            link?.linktype === 'mailto' ||
-            (link?.linktype === 'anchor' && !link?.anchor.startsWith('rte-modal-'))
-              ? (link?.href as string)
-              : modalPopup
-              ? getModalUrl()
-              : canonicalLink
-          }
+          href={resolveHref(link, canonicalLink, modalPopup)}
           passHref
           locale={locale()}
           //placeholder={props.placeholder}
@@ -90,6 +58,7 @@ const NextLink = (props: NextLinkProps): JSX.Element => {
             className={cssClasses}
             id={props.id}
             aria-label={props.ariaLabel}
+            role={props.role}
           >
             {props.children && props.children}
             {!hideText ? link?.text : ''}

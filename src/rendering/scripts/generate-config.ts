@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { constantCase } from 'constant-case';
-import { JssConfig } from 'lib/config';
+import { JssConfig } from 'services/sitecore/config';
 import { jssConfigFactory } from './config';
 
 /*

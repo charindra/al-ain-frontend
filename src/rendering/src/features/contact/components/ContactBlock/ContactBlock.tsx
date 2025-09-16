@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import ContactForm from './ContactForm';
-import FilmingForm from './FilmingForm';
-import PressAndMedia from './PressAndMedia';
+import ContactForm from '../ContactForm';
+import FilmingForm from '../FilmingForm';
+import PressAndMedia from '../PressAndMedia';
 
 // Contact form fields
 interface ContactFormValues {

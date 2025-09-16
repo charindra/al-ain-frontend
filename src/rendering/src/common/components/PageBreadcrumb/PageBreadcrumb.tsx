@@ -2,34 +2,10 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-// import { useTheme } from '../../context/theme-context';
+import { DEFAULT_BREADCRUMB_ITEMS } from './PageBreadcrumb.constants';
+import { PageBreadcrumbProps } from './PageBreadcrumb.types';
 
-const data = [
-  {
-    name: 'Home',
-    link: '/',
-    isCurrent: false,
-  },
-  {
-    name: 'Visit',
-    link: '/visit',
-    isCurrent: true,
-  },
-];
-
-// interface MenuItem {
-//   name: string;
-//   link: string;
-//   isCurrent?: boolean;
-// }
-
-// type PageBreadcrumbProps = {
-//   data: MenuItem[];
-// };
-
-// const PageBreadcrumb = (props: PageBreadcrumbProps): JSX.Element => {
-const PageBreadcrumb = (): JSX.Element => {
-  // const { locale } = useTheme();
+const PageBreadcrumb = ({ items = DEFAULT_BREADCRUMB_ITEMS }: PageBreadcrumbProps): JSX.Element => {
   return (
     <div className="hidden md:block">
       <motion.div
@@ -44,10 +20,13 @@ const PageBreadcrumb = (): JSX.Element => {
         <div className="border-b border-[#D8D8D8] h-[68px] flex flex-wrap items-center change-direction">
           <div className="block mx-auto w-full lg:w-[83.1%] px-4 md:px-6 lg:px-0">
             <div className="flex flex-wrap items-center gap-4 breadcrumb-wrap">
-              {data.map((item, index) => (
-                <div key={index} className="item flex flex-wrap items-center gap-4">
+              {items.map((item, index) => (
+                <div
+                  key={`${item.name}-${index}`}
+                  className="item flex flex-wrap items-center gap-4"
+                >
                   <Link
-                    href={`/${item.link}`}
+                    href={item.link}
                     className={clsx('text-[#1B1F27] text-[14px] leading-[16px]', {
                       'font-medium': item.isCurrent,
                     })}
@@ -59,13 +38,15 @@ const PageBreadcrumb = (): JSX.Element => {
                       })}
                     />
                   </Link>
-                  <Image
-                    src="/images/breadcrumb-arrow.svg"
-                    width={16}
-                    height={16}
-                    alt="arrow"
-                    className="arrow-icon"
-                  />
+                  {!item.isCurrent && (
+                    <Image
+                      src="/images/breadcrumb-arrow.svg"
+                      width={16}
+                      height={16}
+                      alt="arrow"
+                      className="arrow-icon"
+                    />
+                  )}
                 </div>
               ))}
             </div>

@@ -1,5 +1,5 @@
 const plugins = require('scripts/temp/config-plugins');
-import { JssConfig } from 'lib/config';
+import { JssConfig } from 'services/sitecore/config';
 
 export interface ConfigPlugin {
   /**

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .hide-scrollbar {
@@ -18,48 +18,48 @@ body {
 }
 
 @font-face {
-  font-family: "Big Caslon";
-  src: url("/fonts/BigCaslon-Medium.woff2") format("woff2");
+  font-family: 'Big Caslon';
+  src: url('/fonts/BigCaslon-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Fatimah Arabic ITF";
-  src: url("/fonts/FatimahArabicITF-Bold.woff2") format("woff2");
+  font-family: 'Fatimah Arabic ITF';
+  src: url('/fonts/FatimahArabicITF-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Fatimah Arabic ITF";
-  src: url("/fonts/FatimahArabicITF-Light.woff2") format("woff2");
+  font-family: 'Fatimah Arabic ITF';
+  src: url('/fonts/FatimahArabicITF-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Fatimah Arabic ITF";
-  src: url("/fonts/FatimahArabicITF-Medium.woff2") format("woff2");
+  font-family: 'Fatimah Arabic ITF';
+  src: url('/fonts/FatimahArabicITF-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Fatimah Arabic ITF";
-  src: url("/fonts/FatimahArabicITF-Black.woff2") format("woff2");
+  font-family: 'Fatimah Arabic ITF';
+  src: url('/fonts/FatimahArabicITF-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Fatimah Arabic ITF";
-  src: url("/fonts/FatimahArabicITF-Regular.woff2") format("woff2");
+  font-family: 'Fatimah Arabic ITF';
+  src: url('/fonts/FatimahArabicITF-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -130,7 +130,7 @@ body {
 }
 
 .heading-font {
-  font-family: "Big Caslon", sans-serif;
+  font-family: 'Big Caslon', sans-serif;
 }
 
 .page-btn {
@@ -156,9 +156,9 @@ body {
   }
 
   &.disabled {
-    background: #C1C1C1 !important;
-    color: #FFFFFF !important;
-    border-color: #C1C1C1 !important;
+    background: #c1c1c1 !important;
+    color: #ffffff !important;
+    border-color: #c1c1c1 !important;
     pointer-events: none;
   }
 
@@ -229,7 +229,8 @@ body {
       color: #1b1f27;
 
       img {
-        filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(964%) hue-rotate(176deg) brightness(96%) contrast(92%);
+        filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(964%) hue-rotate(176deg)
+          brightness(96%) contrast(92%);
       }
     }
   }
@@ -252,7 +253,8 @@ body {
       color: #1b1f27;
 
       img {
-        filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(964%) hue-rotate(176deg) brightness(96%) contrast(92%);
+        filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(964%) hue-rotate(176deg)
+          brightness(96%) contrast(92%);
       }
     }
   }
@@ -429,7 +431,6 @@ body {
 }
 
 @keyframes arrow-bounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -452,7 +453,7 @@ body {
 
 .brand-popup {
   button {
-    &[aria-label="Close"] {
+    &[aria-label='Close'] {
       display: none;
     }
   }
@@ -505,7 +506,7 @@ body {
   .MuiInput-input {
     color: #1b1f27;
     font-size: 18px;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   .MuiInputBase-input {
@@ -526,7 +527,7 @@ body {
   }
 }
 
-html[lang="ar-ae"] {
+html[lang='ar-ae'] {
   .change-direction {
     direction: rtl;
   }
@@ -542,7 +543,7 @@ html[lang="ar-ae"] {
   }
 
   .heading-font {
-    font-family: "29LT Zarid Sans AL", "Noto Sans Arabic Fallback";
+    font-family: '29LT Zarid Sans AL', 'Noto Sans Arabic Fallback';
   }
 
   // .explore-banner {

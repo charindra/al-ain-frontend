@@ -6,7 +6,7 @@ import 'swiper/css/scrollbar';
 import { Autoplay, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import { useTheme } from '../../context/theme-context';
-import UnderlineHeading from '../UnderlineHeading';
+import UnderlineHeading from '../../../../common/components/UnderlineHeading';
 
 const data = [
   {

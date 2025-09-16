@@ -2,8 +2,8 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeadingText from '../HeadingText';
-import UnderlineHeading from '../UnderlineHeading';
+import HeadingText from 'common/components/HeadingText';
+import UnderlineHeading from 'common/components/UnderlineHeading';
 
 const data = [
   {

@@ -3,8 +3,8 @@
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 import { motion } from 'framer-motion';
-import Heading from '../HeadingText';
-import UnderlineHeading from '../UnderlineHeading';
+import Heading from 'common/components/HeadingText';
+import UnderlineHeading from 'common/components/UnderlineHeading';
 
 const data = [
   {

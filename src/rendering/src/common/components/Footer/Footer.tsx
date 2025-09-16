@@ -1,102 +1,29 @@
 import {
   ComponentRendering,
-  Field,
   GetServerSideComponentProps,
   GetStaticComponentProps,
-  ImageField,
   LayoutServiceData,
-  LinkField,
   RichText,
   Text,
   useSitecoreContext,
   withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { ComponentProps } from 'services/sitecore/component-props';
-import { GraphQLClient } from 'services/sitecore/graphql-client/graphql-client';
 import Image from 'next/image';
-import { useForm } from 'react-hook-form';
-import getFooterQuery from './footer.query';
-import NextLink from 'common/components/NextLink';
 import { TextField } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-
-interface FormValues {
-  name: string;
-  email: string;
-}
-
-// --- Type-safe interfaces for footer JSON response ---
-interface LinkValue {
-  href: string;
-  text?: string;
-  anchor?: string;
-  linktype?: string;
-  class?: string;
-  title?: string;
-  querystring?: string;
-  id?: string;
-}
-
-interface FooterLink {
-  link?: {
-    value: string;
-    jsonValue: { value: LinkValue };
-  };
-}
-
-interface SocialLink {
-  // socialImage: ImageField;
-  socialImage: {
-    jsonValue: ImageField;
-  };
-  linkUrl: {
-    value: string;
-    jsonValue: { value: string };
-  };
-}
-
-interface FooterColumn {
-  columnTitle: {
-    value: string;
-    jsonValue: { value: string };
-  };
-  isSocialColumn?: {
-    value: string;
-    jsonValue: { value: boolean };
-  };
-  children: {
-    results: (FooterLink | SocialLink)[];
-  };
-}
-
-interface FooterDatasource {
-  heading: Field<string>;
-  contactDetails: Field<string>;
-  copyrightText: Field<string>;
-  privacyNotice: {
-    jsonValue: LinkField;
-  };
-  cookiePolicy: {
-    jsonValue: LinkField;
-  };
-  termsAndConditions: {
-    jsonValue: LinkField;
-  };
-  children: {
-    results: FooterColumn[];
-  };
-}
-
-interface FooterProps extends ComponentProps {
-  navigationFolder?: {
-    datasource: FooterDatasource;
-  };
-}
-
-interface FooterQueryResult {
-  datasource: FooterDatasource;
-}
+import NextLink from 'common/components/NextLink';
+import { GraphQLClient } from 'services/sitecore/graphql-client/graphql-client';
+import getFooterQuery from './footer.query';
+import {
+  FooterDatasource,
+  FooterProps,
+  FooterQueryResult,
+  FooterLink,
+  SocialLink,
+} from './Footer.types';
+import { useFooterForm } from './hooks/useFooterForm';
+import { FOOTER_TEXTFIELD_STYLES, SOCIAL_ICON_CONTAINER_CLASSES } from './Footer.constants';
 
 const Footer = (props: FooterProps): JSX.Element => {
   const footerData = props.navigationFolder?.datasource;
@@ -104,31 +31,18 @@ const Footer = (props: FooterProps): JSX.Element => {
   const locale = context.sitecoreContext.language as string;
   const currentYear = new Date().toLocaleDateString(locale, { year: 'numeric' });
 
-  const {
-    register,
-    handleSubmit,
-    formState: { isValid },
-  } = useForm<FormValues>({ mode: 'onChange' });
-
-  const onSubmit = (data: FormValues) => console.log('Form submitted:', data);
-
-  console.log('footerData', footerData);
-
-  const sectionRef = useRef(null);
+  const { register, handleSubmit, formState, onSubmit } = useFooterForm();
+  const { isValid } = formState;
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   return (
     <footer className="bg-[#1B1F27] text-[#FFF] md:pt-[72px] pt-16" ref={sectionRef}>
       <div className="mx-auto w-full lg:w-[88.82%] px-6 lg:px-0">
-        {/* Logo & Newsletter */}
         <div className="md:mb-12 lg:mb-[78px] grid grid-cols-12 gap-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1,
-              ease: 'easeOut',
-              delay: 0,
-            }}
+            transition={{ duration: 1, ease: 'easeOut', delay: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             className="md:col-span-3 col-span-12"
           >
@@ -142,22 +56,18 @@ const Footer = (props: FooterProps): JSX.Element => {
             </a>
             <div className="col-span-12 mt-12 md:mt-6 border-b md:hidden border-[#60626C]" />
             <div className="col-span-12 md:hidden py-12">
-              <RichText tag="p" field={footerData?.contactDetails} className="" />
+              <RichText tag="p" field={footerData?.contactDetails} />
             </div>
             <div className="col-span-12 border-b md:hidden border-[#60626C]" />
             <div className="col-span-12 md:hidden pt-12">
-              <RichText tag="div" field={footerData?.heading} className="" />
+              <RichText tag="div" field={footerData?.heading} />
             </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1,
-              ease: 'easeOut',
-              delay: 0.2,
-            }}
+            transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
             viewport={{ once: true, amount: 0.1 }}
             className="md:col-span-9 col-span-12 py-10 md:py-0 gap-6 md:gap-0"
           >
@@ -170,57 +80,14 @@ const Footer = (props: FooterProps): JSX.Element => {
               onSubmit={handleSubmit(onSubmit)}
               className="flex flex-col gap-10 mb-4 md:flex-row md:items-start md:gap-4"
             >
-              {/* <input
-                placeholder="Your Name"
-                {...register('name', { required: 'Name is required' })}
-                className="p-2 rounded text-black flex-1"
-              /> */}
-              {/* Name field */}
               <TextField
                 variant="standard"
                 label="Your Name"
                 fullWidth
                 {...register('name', { required: 'Name is required' })}
-                // error={!!errors.name}
-                // helperText={errors.name?.message}
-                sx={{
-                  '& .MuiInputBase-input': {
-                    fontFamily: 'Typography/Forms/Desktop/Input/font-family',
-                    fontWeight: 400,
-                    fontStyle: 'normal',
-                    fontSize: 'Typography/Forms/Desktop/Input/font-size',
-                    lineHeight: 'Typography/Forms/Desktop/Input/font-height',
-                    letterSpacing: '0%',
-                    color: '#C1C1C1',
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: '#C1C1C1',
-                    fontFamily: 'Typography/Forms/Desktop/Input/font-family',
-                    fontWeight: 400,
-                    fontSize: 'Typography/Forms/Desktop/Input/font-size',
-                    lineHeight: 'Typography/Forms/Desktop/Input/font-height',
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#C1C1C1',
-                  },
-                  '& .MuiInput-underline:before': {
-                    borderBottomColor: '#C1C1C1',
-                  },
-                  '& .MuiInput-underline:hover:before': {
-                    borderBottomColor: '#C1C1C1',
-                  },
-                  '& .MuiInput-underline:after': {
-                    borderBottomColor: '#C1C1C1',
-                  },
-                }}
+                sx={FOOTER_TEXTFIELD_STYLES}
               />
-              {/* <input
-                type="email"
-                placeholder="Your Email"
-                {...register('email', { required: 'Email is required' })}
-                className="p-2 rounded text-black flex-1"
-              /> */}
-              {/* Email field */}
+
               <TextField
                 variant="standard"
                 label="Your Email"
@@ -233,38 +100,7 @@ const Footer = (props: FooterProps): JSX.Element => {
                     message: 'Invalid email address',
                   },
                 })}
-                // error={!!errors.email}
-                // helperText={errors.email?.message}
-                sx={{
-                  '& .MuiInputBase-input': {
-                    fontFamily: 'Typography/Forms/Desktop/Input/font-family',
-                    fontWeight: 400,
-                    fontStyle: 'normal',
-                    fontSize: 'Typography/Forms/Desktop/Input/font-size',
-                    lineHeight: 'Typography/Forms/Desktop/Input/font-height',
-                    letterSpacing: '0%',
-                    color: '#C1C1C1',
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: '#C1C1C1',
-                    fontFamily: 'Typography/Forms/Desktop/Input/font-family',
-                    fontWeight: 400,
-                    fontSize: 'Typography/Forms/Desktop/Input/font-size',
-                    lineHeight: 'Typography/Forms/Desktop/Input/font-height',
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#C1C1C1',
-                  },
-                  '& .MuiInput-underline:before': {
-                    borderBottomColor: '#C1C1C1',
-                  },
-                  '& .MuiInput-underline:hover:before': {
-                    borderBottomColor: '#C1C1C1',
-                  },
-                  '& .MuiInput-underline:after': {
-                    borderBottomColor: '#C1C1C1',
-                  },
-                }}
+                sx={FOOTER_TEXTFIELD_STYLES}
               />
               <button
                 type="submit"
@@ -277,16 +113,12 @@ const Footer = (props: FooterProps): JSX.Element => {
           </motion.div>
         </div>
         <div className="col-span-12 border-b md:hidden border-[#60626C]" />
-        {/* Footer Columns */}
+
         <div className="mb-12 grid grid-cols-12 gap-6 pt-12 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1,
-              ease: 'easeOut',
-              delay: 0,
-            }}
+            transition={{ duration: 1, ease: 'easeOut', delay: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             className="md:col-span-3 col-span-12 hidden md:block"
           >
@@ -298,11 +130,7 @@ const Footer = (props: FooterProps): JSX.Element => {
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1,
-                  ease: 'easeOut',
-                  delay: idx * 0.2,
-                }}
+                transition={{ duration: 1, ease: 'easeOut', delay: idx * 0.2 }}
                 viewport={{ once: true, amount: 0.1 }}
                 key={idx}
                 className={
@@ -318,7 +146,7 @@ const Footer = (props: FooterProps): JSX.Element => {
                 ></Text>
 
                 {col.isSocialColumn?.jsonValue?.value ? (
-                  <div className="flex lg:flex-nowrap flex-wrap  justify-start gap-2 text-lg">
+                  <div className="flex lg:flex-nowrap flex-wrap justify-start gap-2 text-lg">
                     {col.children.results.map((social: SocialLink, i) => (
                       <a
                         key={i}
@@ -326,13 +154,13 @@ const Footer = (props: FooterProps): JSX.Element => {
                         target="_blank"
                         className="group"
                       >
-                        <div className="w-14 h-14 flex items-center justify-center rounded-full border border-gray-500 transition-colors duration-300 ease-in-out bg-transparent group-hover:bg-white group-hover:border-white">
+                        <div className={SOCIAL_ICON_CONTAINER_CLASSES}>
                           <img
                             src={'/' + social.socialImage.jsonValue?.value?.src}
                             alt="Logo"
                             width={24}
                             height={24}
-                            className={`transition duration-300 ease-in-out group-hover:brightness-0`}
+                            className="transition duration-300 ease-in-out group-hover:brightness-0"
                           />
                         </div>
                       </a>
@@ -357,15 +185,10 @@ const Footer = (props: FooterProps): JSX.Element => {
           </div>
         </div>
 
-        {/* Bottom Row */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 1,
-            ease: 'easeOut',
-            delay: 4 * 0.2,
-          }}
+          transition={{ duration: 1, ease: 'easeOut', delay: 4 * 0.2 }}
           viewport={{ once: true, amount: 0.1 }}
           className="mt-12 flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center border-t border-gray-700 py-12 lg:py-12 md:py-6 text-sm"
         >
@@ -379,15 +202,15 @@ const Footer = (props: FooterProps): JSX.Element => {
             <NextLink
               field={footerData?.termsAndConditions?.jsonValue}
               className="hover:underline text-[#C1C1C1] text-sm"
-            ></NextLink>
+            />
             <NextLink
               field={footerData?.privacyNotice?.jsonValue}
               className="hover:underline text-[#C1C1C1] text-sm"
-            ></NextLink>
+            />
             <NextLink
               field={footerData?.cookiePolicy?.jsonValue}
               className="hover:underline text-[#C1C1C1] text-sm"
-            ></NextLink>
+            />
           </div>
         </motion.div>
       </div>
@@ -395,7 +218,6 @@ const Footer = (props: FooterProps): JSX.Element => {
   );
 };
 
-// --- Fetching Data ---
 export const fetchComponentProps = async (
   rendering: ComponentRendering,
   layoutData: LayoutServiceData
@@ -414,7 +236,6 @@ export const fetchComponentProps = async (
   return { navigationFolder: data, rendering };
 };
 
-// --- SSR / SSG ---
 export const getStaticProps: GetStaticComponentProps = async (rendering, layoutData) =>
   fetchComponentProps(rendering, layoutData);
 export const getServerSideProps: GetServerSideComponentProps = async (rendering, layoutData) =>

@@ -12,7 +12,7 @@ import {
   UseFormRegister,
   UseFormReset,
 } from 'react-hook-form';
-import HeadingText from '../HeadingText';
+import HeadingText from 'common/components/HeadingText';
 
 interface FormValues {
   firstName: string;

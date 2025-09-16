@@ -1,6 +1,5 @@
 import {
   ComponentRendering,
-  Field,
   GetServerSideComponentProps,
   GetStaticComponentProps,
   LayoutServiceData,
@@ -14,25 +13,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { NavigationFolder, NavigationItem, TopNavigationProps } from './TopNavigation.types';
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const normalizeMenuItems = (items: any[]): NavigationItem[] => {
-  return items.map((item) => {
-    const link = item?.link?.jsonValue?.value ?? {};
-    return {
-      href: link.href ?? '',
-      text: link.text ?? '',
-      anchor: link.anchor ?? '',
-      linktype: link.linktype ?? '',
-      class: link.class ?? '',
-      title: link.title ?? '',
-      querystring: link.querystring ?? '',
-      id: link.id ?? '',
-      button: item?.button?.value === '1',
-      group: item?.group?.value ?? '',
-    };
-  });
-};
+import { normalizeMenuItems } from './TopNavigation.utils';
 
 const TopNavigation = (props: TopNavigationProps): JSX.Element => {
   const context = useSitecoreContext();
@@ -41,9 +22,6 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
 
   const targetLang = locale.toLowerCase() === 'en' ? 'ar-ae' : 'en';
   const langBasedHref = `${targetLang}${pathname}`;
-
-  console.log('pathname', pathname);
-  console.log('locale', locale);
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);

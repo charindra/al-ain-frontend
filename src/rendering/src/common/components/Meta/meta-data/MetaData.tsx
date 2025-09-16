@@ -1,16 +1,11 @@
-import { RouteData, Field, LayoutServiceContextData } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 import MetaDescription from './MetaDescription';
 import MetaKeywords from './MetaKeywords';
 import MetaShareImage from './MetaShareImage';
 import MetaTitle from './MetaTitle';
 import MetaMisc from './MetaMisc';
 import { isDisabledForIndexing } from 'services/sitecore/utils/indexing-utils';
-
-type MetaDataProps = {
-  sitecore: LayoutServiceContextData & {
-    route: RouteData | null;
-  };
-};
+import { MetaDataProps } from './Meta.types';
 
 const MetaData = ({ sitecore }: MetaDataProps): JSX.Element => {
   const innerRoute = sitecore.route;

@@ -1,13 +1,11 @@
-import { Field, Item } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 import { GenericFieldValue } from '@sitecore-jss/sitecore-jss/types/layout/models';
+import { MetaFieldProps } from './Meta.types';
 
-const MetaShareImage = ({
-  field,
-}: {
-  field: Field<GenericFieldValue> | Item | Item[] | undefined;
-}): JSX.Element => {
+const MetaShareImage = ({ field }: MetaFieldProps): JSX.Element => {
   const innerField = field as Field<GenericFieldValue>;
   const mediaSrc: string = (innerField?.value as { src: string })?.src;
+
   return (
     <>
       {mediaSrc && (

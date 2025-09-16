@@ -1,44 +1,12 @@
-import { Field, LinkField, Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
-
-interface MenuItem {
-  name: string;
-  link: string;
-  isCurrent?: boolean;
-}
-
-type GalleryBannerProps = {
-  fields: {
-    data: {
-      datasource: {
-        id: string;
-        name: string;
-        heading: Field<string>;
-        description: Field<string>;
-        children: {
-          results: {
-            id: string;
-            name: string;
-            link: LinkField;
-          }[];
-        };
-      };
-    };
-  };
-};
+import { GalleryBannerProps } from './GalleryBanner.types';
+import { mapToBreadcrumb } from './GalleryBanner.utils';
 
 const GalleryBanner = (props: GalleryBannerProps): JSX.Element => {
-  console.log('Banner Data', props);
   const data = props?.fields?.data?.datasource;
-
-  // map children into breadcrumb
-  const breadcrumb: MenuItem[] =
-    data?.children?.results?.map((child, index, arr) => ({
-      name: child.name as unknown as string, // option 1 quick cast
-      link: child.link.value?.href ?? '#',
-      isCurrent: index === arr.length - 1,
-    })) ?? [];
+  const breadcrumb = mapToBreadcrumb(data);
 
   return (
     <div className="pt-[99px] lg:pt-[135px]">

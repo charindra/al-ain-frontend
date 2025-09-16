@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import HeadingText from '../HeadingText';
+import HeadingText from 'common/components/HeadingText';
 
 interface SliderItem {
   img: string;
