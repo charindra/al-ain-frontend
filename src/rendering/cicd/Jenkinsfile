@@ -1,0 +1,16 @@
+@Library('arimac-shared-library') _
+
+def CONFIG = [
+				PROJECT_NAME:"al-ain-museum-web-frontend",
+                PROJECT_ID:"1310",
+				BRANCH_NAME:"${env.BRANCH_NAME}", 
+                PROJECT_TYPE:"ai-ain-museum-fe",
+				GITLAB_CONNECTION_NAME:"arimac-gitlab",
+				GITLAB_PROJECT_LOCATION:"al-ain-museum/frontend-sitecore-latest",
+				GITLAB_CONTAINER_REGISTRY:"registry-gitlab.arimaclanka.com", 
+				DOCKER_IMAGE:"arimac/arimac-devops-mate:v5.0",
+				DEFAULT_VERSION:'0.1.0',
+				TARGET_ENVIRONMENT:'development',
+				DEPLOY_ON_DEMAND:'no'
+			]
+buildPipeline(CONFIG)

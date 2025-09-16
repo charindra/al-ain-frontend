@@ -1,0 +1,51 @@
+﻿---
+ID: "9d25f935-f655-4ea9-81f9-5beaaf932358"
+Parent: "d83ee016-473a-4fbd-a68e-90944f385ee5"
+Template: "3a5bab8a-e31f-4a16-84f2-3d8e6d9022d1"
+Path: "/sitecore/content/alain-site-core-nextjs/home/the-museum/Page Components/TextEdgeImageBlock/TextEdgeImageData1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0024ac4c-3c40-42ed-94dd-6b7c96d38305"
+      Hint: btnLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{2F0B788E-9252-4E20-9DDC-2845427E6F23}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T172918Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "576bf659-d5ef-4df7-825a-12dde4776432"
+      Hint: description
+      Value: Step into the rhythms of traditional Emirati life through objects once used in homes, markets, and desert camps. Each piece offers a vivid glimpse into a way of life both humble and remarkable.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "83fffaf8-c3b8-4c39-8573-ae9f9f7c5981"
+      Hint: heading
+      Value: The Founding Father
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0e8bf74b-d090-4b86-9e9e-eae03f756a7c"
+    - ID: "a01065fc-56a0-4a0c-953e-0857cc77d90e"
+      Hint: btnText
+      Value: Explore
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T183132Z
+    - ID: "da020081-d5ce-4b28-b010-b4f8852e3e58"
+      Hint: img
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{94DB528B-BC66-44EF-8DE5-E7C06BD05F55}" />
+    - ID: "e8b9456d-c8bc-4c2c-a1db-e26380bef6bf"
+      Hint: subHeading
+      Value: Integer lorem turpis feugiat

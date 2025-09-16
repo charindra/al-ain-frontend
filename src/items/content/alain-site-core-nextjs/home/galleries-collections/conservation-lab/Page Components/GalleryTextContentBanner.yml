@@ -1,0 +1,41 @@
+﻿---
+ID: "c8c0ce5f-8c11-41a1-ac1d-28ab0567ac8e"
+Parent: "b42289ef-2ad0-4417-ae85-4358988722d3"
+Template: "341d98a0-53cc-4d5e-8aab-c99b263ad0b6"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/conservation-lab/Page Components/GalleryTextContentBanner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250915T114947Z
+    - ID: "406e7036-c80b-456f-ad6a-ea6e6578ce97"
+      Hint: description
+      Value: Our facility includes a Dust Room, Armoury, two storage rooms, and a secure Vault, all designed to protect delicate artefacts in the best possible conditions.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "84099343-d8a6-4f38-b295-918baa1dabfc"
+      Hint: image
+      Value: |
+        <image mediaid="{95FEDBBE-C595-44C9-8C22-2850E77EAB2D}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5002f181-04cc-4f56-af38-21e429199157"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T121000Z
+    - ID: "f6fa4d49-d357-4daa-a106-dc595898d0dd"
+      Hint: heading
+      Value: "Did You Know?"

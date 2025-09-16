@@ -1,0 +1,51 @@
+﻿---
+ID: "fe9fd486-acc9-4856-bb1c-6a8a364553c1"
+Parent: "3a0f334c-24af-4a50-8c0c-585141bc407b"
+Template: "3a5bab8a-e31f-4a16-84f2-3d8e6d9022d1"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/Page Components/TextEdgeImageBlock/TextEdgeImageData2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0024ac4c-3c40-42ed-94dd-6b7c96d38305"
+      Hint: btnLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{F0D750B7-1815-484F-961A-FF2663DC2542}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T173049Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "576bf659-d5ef-4df7-825a-12dde4776432"
+      Hint: description
+      Value: Behind the scenes, experts work tirelessly to preserve and protect Al Ain’s invaluable artifacts. Through careful conservation, the museum ensures these cultural treasures endure for generations to come.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "83fffaf8-c3b8-4c39-8573-ae9f9f7c5981"
+      Hint: heading
+      Value: INSIDE CONSERVATION LAB
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "81a51d69-4fab-42bc-9efc-32d10695eef3"
+    - ID: "a01065fc-56a0-4a0c-953e-0857cc77d90e"
+      Hint: btnText
+      Value: Explore
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T094402Z
+    - ID: "da020081-d5ce-4b28-b010-b4f8852e3e58"
+      Hint: img
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{7CBD455C-14A6-4C3F-9405-5B3D25C2ED7A}" />
+    - ID: "e8b9456d-c8bc-4c2c-a1db-e26380bef6bf"
+      Hint: subHeading
+      Value: Where History Is Preserved And Protected

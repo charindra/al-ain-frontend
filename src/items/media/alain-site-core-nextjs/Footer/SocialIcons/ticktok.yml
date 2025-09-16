@@ -1,0 +1,73 @@
+﻿---
+ID: "4d5fd22b-624c-4899-ab2d-01c8d10fd214"
+Parent: "4f823a09-6ecd-4737-ba3f-a0e15f50cc27"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: "/sitecore/media library/alain-site-core-nextjs/Footer/SocialIcons/ticktok"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/4D5FD22B624C4899AB2D01C8D10FD214.ashx?h=16&thn=1&w=16"
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "3b3a555a-5d71-4540-b506-eef422dc74d8"
+  Value: PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xNy4wNzI1IDBIMTMuMDI3OFYxNi4zNDc4QzEzLjAyNzggMTguMjk1NyAxMS40NzIyIDE5Ljg5NTcgOS41MzYyNiAxOS44OTU3QzcuNjAwMzQgMTkuODk1NyA2LjA0NDY5IDE4LjI5NTcgNi4wNDQ2OSAxNi4zNDc4QzYuMDQ0NjkgMTQuNDM0OCA3LjU2NTc3IDEyLjg2OTUgOS40MzI1NyAxMi44VjguNjk1NjdDNS4zMTg3MiA4Ljc2NTIgMiAxMi4xMzkxIDIgMTYuMzQ3OEMyIDIwLjU5MTMgNS4zODc4NiAyNCA5LjU3MDg1IDI0QzEzLjc1MzggMjQgMTcuMTQxNiAyMC41NTY1IDE3LjE0MTYgMTYuMzQ3OFY3Ljk2NTJDMTguNjYyNyA5LjA3ODI3IDIwLjUyOTUgOS43MzkxMyAyMi41IDkuNzczOTNWNS42Njk1N0MxOS40NTc5IDUuNTY1MjIgMTcuMDcyNSAzLjA2MDg3IDE3LjA3MjUgMFoiIGZpbGw9IndoaXRlIi8+DQo8L3N2Zz4NCg==
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 520
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/svg+xml
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: svg
+Languages:
+- Language: "ar-AE"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T183043Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zaheer
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zaheer
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "631767cf-db0d-49ca-936b-a3f2f80fd6c5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T183109Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T183702Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zaheer
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zaheer
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "edfeb8fb-f457-4734-ab3e-2b82c9b41caa"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T183702Z

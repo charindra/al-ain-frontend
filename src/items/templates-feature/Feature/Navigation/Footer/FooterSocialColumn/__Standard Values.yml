@@ -1,0 +1,38 @@
+﻿---
+ID: "12a5b2e8-54f6-4e17-a6d0-36f4eec967cb"
+Parent: "26c946eb-1245-4d73-9678-10d4c3d3a8c6"
+Template: "26c946eb-1245-4d73-9678-10d4c3d3a8c6"
+Path: /sitecore/templates/Feature/Navigation/Footer/FooterSocialColumn/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{0521E768-C5BF-4EB6-A5BE-D2D0CCAA41AE}"
+- ID: "523a5a00-ef1b-45f8-8d3b-9910746ebae8"
+  Hint: isSocialColumn
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T150626Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d7c6fb01-ab27-499d-9eb4-065d2c87fcab"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T202024Z

@@ -1,0 +1,60 @@
+﻿---
+ID: "b31e5f4c-eca1-4acc-a9c9-9509ef7fd152"
+Parent: "4ce39966-6af5-4655-ac35-e209a1af0ccf"
+Template: "680f67ab-12b8-4e48-8e48-089dfe224aa1"
+Path: "/sitecore/content/alain-site-core-nextjs/Components/Navigation/TopNavigation/Visit"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: "ar-AE"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250915T001411Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zaheer
+    - ID: "5d99734f-d998-4e7d-ae93-80782a30920d"
+      Hint: link
+      Value: |
+        <link text="Visit AR" anchor="" linktype="internal" class="" title=""  querystring="" id="{CC6C0552-1A65-4E39-AD0D-88355EF82D2B}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zaheer
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c40a6aa0-943f-49c0-8cf5-ba6c931af05f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T001428Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T151120Z
+    - ID: "5d99734f-d998-4e7d-ae93-80782a30920d"
+      Hint: link
+      Value: |
+        <link text="Visit" anchor="" linktype="internal" class="" title=""  querystring="" id="{CC6C0552-1A65-4E39-AD0D-88355EF82D2B}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c3c99ee0-0293-4431-872d-8c9632822253"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T235759Z

@@ -1,0 +1,44 @@
+﻿---
+ID: "1af5054e-7f8e-49bc-8eef-9d9745f05a2a"
+Parent: "e7125152-388f-49f6-bb6a-4f828e22e3ba"
+Template: "a1cee2b1-37b1-4ca5-a565-f32a18ad2f50"
+Path: "/sitecore/content/alain-site-core-nextjs/home/Page Components/CollectionHighlights/SlideItem3"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T165404Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "62431d14-c490-4abf-b1df-d65b8968928d"
+      Hint: img
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{EC282193-3135-41DB-927C-061385147D79}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "59cc857c-ae4d-4d36-bc20-d01cffd149b0"
+    - ID: "af04f00c-d75c-4a90-87f6-ce18fe723800"
+      Hint: subHeading
+      Value: Very long Artefact Name Spanning 2 Lines
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d40953f9-ec57-4e39-adfd-ef102e913933"
+      Hint: tag
+      Value: "CA -1900 - CA -2300"
+    - ID: "d9c1a967-82b2-40f1-a9bf-d05720c1d156"
+      Hint: heading
+      Value: Very Very Big Gallery Name
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T083215Z

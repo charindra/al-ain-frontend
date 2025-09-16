@@ -1,0 +1,121 @@
+﻿---
+ID: "2f0b788e-9252-4e20-9ddc-2845427e6f23"
+Parent: "9514e9e1-bbca-4fe5-9903-0a80470c184b"
+Template: "dc978489-8963-4282-be19-1e5d93cc1844"
+Path: "/sitecore/content/alain-site-core-nextjs/home/founding-father"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/star_yellow.png
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: "ar-AE"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T144002Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "57ca61f9-c53b-459e-acb1-604fdec0c8e3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T144002Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{05418581-E6A2-46AC-BDBF-C222703A6F0D}"
+              s:ccb="Clear on publish"
+              s:ds="{4CE39966-6AF5-4655-AC35-E209A1AF0CCF}"
+              s:par="CSSStyles" />
+            <r
+              uid="{ACA1BD09-B59B-449F-A32E-3889D60D7CB0}">
+              <p:d />
+            </r>
+            <r
+              uid="{B02A15F7-3F0D-40F6-8770-AD386D4AEC30}"
+              p:after="r[@uid='{05418581-E6A2-46AC-BDBF-C222703A6F0D}']"
+              s:ds="{E2CC9E4B-A36B-4590-AE6E-2E2B1DDAE1C5}"
+              s:id="{1ECFBD8E-36BD-404E-A2FB-33D8432BCCA7}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{7A8433F3-6CD3-4EC3-BBF3-2656EC8707C8}"
+              p:after="r[@uid='{B02A15F7-3F0D-40F6-8770-AD386D4AEC30}']"
+              s:ds="{4869E7AF-B60A-4C15-AF14-C677E00CDCB9}"
+              s:id="{5B39B66F-F09D-4CEA-99EB-8C355D484E78}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{3ADD4FDF-7A7D-4F18-9DE7-DB0EE4F37F38}"
+              p:after="r[@uid='{7A8433F3-6CD3-4EC3-BBF3-2656EC8707C8}']"
+              s:ds="{B7259A5F-A828-4DED-BDE3-706FDB7C7014}"
+              s:id="{73D8845C-7495-4B12-9745-B98D5D53F2B4}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{AFF75825-6B28-4645-81A2-E3F18FA983A2}"
+              p:after="r[@uid='{3ADD4FDF-7A7D-4F18-9DE7-DB0EE4F37F38}']"
+              s:ds="{BB44F08A-5661-4E65-9B7F-01D152A68FB9}"
+              s:id="{8965C175-B431-47D5-8CE1-5B195EBE3404}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{07B3CAB0-FC71-4B9E-885A-BB1770A9DB87}"
+              p:after="*[1=2]"
+              s:ds="{6DB872C7-F60C-4930-94FB-159DA01891A3}"
+              s:id="{A02EFEFF-E1C9-4449-B5F7-E7AC79FD296B}"
+              s:par="CSSStyles"
+              s:ph="jss-footer"
+              s:ccb="Clear on publish" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250912T210708Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "56a1ae06-7eb4-4bda-ac1a-2c17ab3c8e7d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T115852Z

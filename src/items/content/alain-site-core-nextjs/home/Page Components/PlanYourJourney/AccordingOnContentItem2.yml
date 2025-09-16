@@ -1,0 +1,37 @@
+﻿---
+ID: "bee948a2-ec65-4969-a223-16ae660bb45d"
+Parent: "4e294ac6-b26b-4fd1-861a-94cf2f658623"
+Template: "01de6220-c5d8-48aa-bd8c-ec2f61c88d80"
+Path: "/sitecore/content/alain-site-core-nextjs/home/Page Components/PlanYourJourney/AccordingOnContentItem2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1365b63b-fcc1-4595-b5c8-568755740f8a"
+      Hint: title
+      Value: By Taxi
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250915T075643Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "396703b3-d00a-4487-a4ab-16aa23bb8f31"
+    - ID: "a7d96161-82ec-4ff8-8492-23e2af295b22"
+      Hint: description
+      Value: Al Ain Museum showcases the rich heritage of the UAE through archaeological finds, traditional objects, and cultural exhibits. Visitors can explore galleries dedicated to daily life, ancient craftsmanship, and the legacy of the region’s communities.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T075855Z

@@ -1,0 +1,34 @@
+﻿---
+ID: "b4a72fae-0596-4bc7-a50a-21ee2a251e29"
+Parent: "18188a5a-a993-46a7-a060-6b275615acc2"
+Template: "0521e768-c5bf-4eb6-a5be-d2d0ccaa41ae"
+Path: "/sitecore/content/alain-site-core-nextjs/Components/Navigation/Footer/Follow Us/LinkedIn"
+SharedFields:
+- ID: "49399f65-43f3-49a8-8424-7f3ac0860030"
+  Hint: linkUrl
+  Value: "https://www.linkedin.com"
+- ID: "60bf47a9-218e-46ab-a077-cc872a65f927"
+  Hint: socialImage
+  Value: |
+    <image mediaid="{DD993601-C89B-419C-B7B2-1FBC3C3CF506}" />
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T184716Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3bea2930-b96b-4508-9b01-ac3cbfd87c9b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T185106Z

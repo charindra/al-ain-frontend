@@ -1,0 +1,16 @@
+{
+    "namespace": "alain-site-core-nextjs-Content",
+    "references": [ "alain-site-core-nextjs" ],
+    "items": {
+        "includes": [
+            {
+                "name": "content",
+                "path": "/sitecore/content/alain-site-core-nextjs"
+            },
+            {
+                "name": "media",
+                "path": "/sitecore/media library/alain-site-core-nextjs"
+            }
+        ]
+    }
+}

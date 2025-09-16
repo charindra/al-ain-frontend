@@ -1,0 +1,41 @@
+﻿---
+ID: "b550aeb0-f226-4a88-ae7e-fd1c632864d5"
+Parent: "e3bbd8ff-7a26-4d27-9add-8dfcb081e692"
+Template: "dccbc895-a42f-47cb-a92b-b0d1a930e6e9"
+Path: "/sitecore/content/alain-site-core-nextjs/home/visit/Page Components/ExploreBottomSection"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250915T092655Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8914eda3-500b-4d3b-b556-5d061028c086"
+      Hint: desktopImage
+      Value: |
+        <image mediaid="{C27B2594-98D6-463F-8855-2AC49569DE6F}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8861a622-b762-4f32-a6a7-d4b18183cd3f"
+    - ID: "9b31afe1-63a4-44a3-aac4-3387a83f06b8"
+      Hint: heading
+      Value: Explore, Learn, Experience
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "bfec2ce1-f2e8-47ee-a2e6-743acbd0602a"
+      Hint: description
+      Value: Step into the story of the UAE through its treasured heritage and timeless artifacts at Al Ain Museum.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T095724Z

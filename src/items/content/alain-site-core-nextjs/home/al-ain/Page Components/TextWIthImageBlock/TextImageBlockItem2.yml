@@ -1,0 +1,41 @@
+﻿---
+ID: "fa5ab598-2b79-4cb0-bc59-ed7231fda1db"
+Parent: "dfbefc09-d09e-4b9d-9b64-ba5084856fee"
+Template: "8b6bd80e-6fa4-4b05-ba01-994fdad3ba0e"
+Path: "/sitecore/content/alain-site-core-nextjs/home/al-ain/Page Components/TextWIthImageBlock/TextImageBlockItem2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T172136Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c7803d0e-8a29-4b11-9ef3-1f3646ff2d25"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "cadf4563-98c5-4e46-b00a-d0d56c5d80b8"
+      Hint: heading
+      Value: Vestibulum a feugiat enim, id aliquet eros
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T184431Z
+    - ID: "de3837ba-5ddd-4d23-b2d2-73b7ac3d1c0e"
+      Hint: description
+      Value: Lorem ipsum dolor sit amet consectetur. Id lacus scelerisque quis montes aliquet nullam ac praesent.
+    - ID: "ee4fb22d-442d-4907-8f2b-8cb1dd180d57"
+      Hint: img
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{49F4FC31-2519-47E1-A0CC-046A75615493}" />

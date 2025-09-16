@@ -1,0 +1,38 @@
+﻿---
+ID: "e2cc9e4b-a36b-4590-ae6e-2e2b1ddae1c5"
+Parent: "8e809ad5-e8dc-4354-8b71-585792639793"
+Template: "4cf0dd8c-7a19-489e-9b8e-1b5a5c01be1a"
+Path: "/sitecore/content/alain-site-core-nextjs/home/founding-father/Page Components/PageBanner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T125747Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f0c080ec-025b-49b4-9b1c-0fab4535915a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "cd80eb6d-9738-4e6f-9246-1174bfe86055"
+      Hint: title
+      Value: Founding Father
+    - ID: "d24048e7-d4f6-49d9-876c-f13f5c2c9a4f"
+      Hint: image
+      Value: |
+        <image mediaid="{4B365671-219B-4B92-AECA-5EAFE97C6B0F}" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T125913Z

@@ -1,0 +1,37 @@
+﻿---
+ID: "d85b38eb-8cd5-4d33-8a30-87103542f93b"
+Parent: "e3bbd8ff-7a26-4d27-9add-8dfcb081e692"
+Template: "e2063f47-086b-4785-8e55-4c98c17825af"
+Path: "/sitecore/content/alain-site-core-nextjs/home/visit/Page Components/PlanYourJourney"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250915T080105Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "7fff7715-b5ea-48bd-a071-b4b8c21227ab"
+      Hint: topTitle
+      Value: Getting Here
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "29281e6e-7633-4608-9d25-249b5175ab2e"
+    - ID: "b09b5dcb-893f-4edf-a22d-9ac795d5cdbc"
+      Hint: title
+      Value: Plan Your Journey
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T080200Z

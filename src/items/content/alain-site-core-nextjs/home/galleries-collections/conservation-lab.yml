@@ -1,0 +1,90 @@
+﻿---
+ID: "f0d750b7-1815-484f-961a-ff2663dc2542"
+Parent: "4d2615a3-6b63-44bc-9e29-ddd23cfbad56"
+Template: "dc978489-8963-4282-be19-1e5d93cc1844"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/conservation-lab"
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/clipboard_add.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{05418581-E6A2-46AC-BDBF-C222703A6F0D}"
+              s:ccb="Clear on publish"
+              s:ds="{4CE39966-6AF5-4655-AC35-E209A1AF0CCF}"
+              s:par="CSSStyles" />
+            <r
+              uid="{ACA1BD09-B59B-449F-A32E-3889D60D7CB0}">
+              <p:d />
+            </r>
+            <r
+              uid="{13BE587B-8DB6-4701-B761-30E13C4F08E1}"
+              p:after="r[@uid='{05418581-E6A2-46AC-BDBF-C222703A6F0D}']"
+              s:ds="{31396231-B620-4213-8EE6-7023E736CA47}"
+              s:id="{216EBAAB-E6D5-4C4A-A086-912A2FBD8930}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{0E715C49-A9EB-4A7D-8333-452CE2B293F6}"
+              p:after="r[@uid='{13BE587B-8DB6-4701-B761-30E13C4F08E1}']"
+              s:id="{81FEB18B-7B17-44B4-8713-271AF52C48AC}"
+              s:ph="jss-main" />
+            <r
+              uid="{4561138E-81E2-4C65-B4A1-40BCCA989C98}"
+              p:after="r[@uid='{0E715C49-A9EB-4A7D-8333-452CE2B293F6}']"
+              s:ds="{C8C0CE5F-8C11-41A1-AC1D-28AB0567AC8E}"
+              s:id="{D20B58CE-08A6-4A28-908F-63CF01D3847B}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{E1FC2990-82AC-4710-BA6C-F734F9D0C0D0}"
+              p:after="r[@uid='{4561138E-81E2-4C65-B4A1-40BCCA989C98}']"
+              s:ds="{6B399564-511D-4A6F-A7FE-8E725D25DD47}"
+              s:id="{8965C175-B431-47D5-8CE1-5B195EBE3404}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{44C33B7F-79B8-422B-B9D9-E293F32C506B}"
+              p:after="*[1=2]"
+              s:ds="{6DB872C7-F60C-4930-94FB-159DA01891A3}"
+              s:id="{A02EFEFF-E1C9-4449-B5F7-E7AC79FD296B}"
+              s:par="CSSStyles"
+              s:ph="jss-footer"
+              s:ccb="Clear on publish" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250912T212322Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "860f90bd-bf48-4fe3-af2b-71b7f9f250d6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T124941Z

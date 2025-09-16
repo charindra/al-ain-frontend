@@ -1,0 +1,48 @@
+﻿---
+ID: "858764e6-58e1-4ae7-83e8-f96af5544098"
+Parent: "86066048-f641-45df-a31b-87090743690d"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/alain-site-core-nextjs/jss-main"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "jss-main"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: |
+    {226FB086-92BC-598B-AABE-D351A6A6D5AF}
+    {6E67F733-E629-5491-9EBA-C2B815678990}
+    {A1D8E4E1-EECF-5049-A47F-DAB91F4846BB}
+    {0BD09F8E-9F6C-534F-B47E-E2C4DA157932}
+    {EB2E4FFD-2761-4653-B052-26A64D385227}
+    {444E469B-DF1D-439F-8249-3413985BA690}
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Main
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250530T094218Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\JssImport
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3d8ddddd-75b4-47f3-a019-6b1848f794ea"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250910T134003Z

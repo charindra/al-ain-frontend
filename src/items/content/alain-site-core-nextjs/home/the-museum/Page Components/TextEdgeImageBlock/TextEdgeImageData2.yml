@@ -1,0 +1,51 @@
+﻿---
+ID: "0c7bc43b-7fff-4650-a810-70711fc35fcf"
+Parent: "d83ee016-473a-4fbd-a68e-90944f385ee5"
+Template: "3a5bab8a-e31f-4a16-84f2-3d8e6d9022d1"
+Path: "/sitecore/content/alain-site-core-nextjs/home/the-museum/Page Components/TextEdgeImageBlock/TextEdgeImageData2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0024ac4c-3c40-42ed-94dd-6b7c96d38305"
+      Hint: btnLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{99B1B413-A267-49D9-A0AE-310051B184F3}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T172933Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "576bf659-d5ef-4df7-825a-12dde4776432"
+      Hint: description
+      Value: Behind the scenes, experts work tirelessly to preserve and protect Al Ain’s invaluable artifacts. Through careful conservation, the museum ensures these cultural treasures endure for generations to come.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "83fffaf8-c3b8-4c39-8573-ae9f9f7c5981"
+      Hint: heading
+      Value: Al Ain
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "881cdee3-4d1a-497b-abe1-f718b3bbea39"
+    - ID: "a01065fc-56a0-4a0c-953e-0857cc77d90e"
+      Hint: btnText
+      Value: Explore
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T183318Z
+    - ID: "da020081-d5ce-4b28-b010-b4f8852e3e58"
+      Hint: img
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{8CA21FE6-1E9B-482E-A438-C44ABC4C414C}" />
+    - ID: "e8b9456d-c8bc-4c2c-a1db-e26380bef6bf"
+      Hint: subHeading
+      Value: Lorem Ipsum Dolor Sit Amet

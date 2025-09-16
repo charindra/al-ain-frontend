@@ -1,0 +1,88 @@
+﻿---
+ID: "688aef5e-62b6-4114-be75-ce5928ccc655"
+Parent: "cc09e20c-06d1-4a43-8a75-dc64301cc677"
+Template: "1b572aba-1c2d-422e-b89c-32ed4d60bf77"
+Path: "/sitecore/content/alain-site-core-nextjs/home/Page Components/EventCardGrid"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0880391a-2278-4690-bfac-8b66bbd77e3a"
+      Hint: right_btnText
+      Value: Register
+    - ID: "08dc6a22-8d7e-43e1-a6a8-c74def007e7f"
+      Hint: left_img
+      Value: |
+        <image mediaid="{CAAB5D9F-17A0-49AD-A7A4-386E55B4161B}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T161544Z
+    - ID: "2b498375-6168-4bff-b879-7d3c02ec65d0"
+      Hint: right_end_date
+      Value: 20251020T000000Z
+    - ID: "2e58b028-5470-4493-936f-4f0b5b408aae"
+      Hint: img
+      Value: |
+        <image mediaid="{C6D62ED8-A41B-44B9-BD2B-E75321940E05}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "5fab47df-cc94-43db-996f-02b40bea745b"
+      Hint: btnText
+      Value: Know More
+    - ID: "6c25b65f-34e6-4aef-bab5-693994a6da3a"
+      Hint: left_start_date
+      Value: 20250815T000000Z
+    - ID: "7166a893-cbd4-44db-bf66-c4567c943725"
+      Hint: end_date
+      Value: 20250912T000000Z
+    - ID: "78fa9484-4ad1-4e48-9d2f-23de1406908b"
+      Hint: right_start_date
+      Value: 20250905T000000Z
+    - ID: "884a3d95-4178-4909-9b33-17faca8f3215"
+      Hint: left_title
+      Value: Traditional Crafts and Heritage
+    - ID: "891bdb88-6bb0-4332-b11a-7325ea4fcb17"
+      Hint: start_date
+      Value: 20250701T000000Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bf5c690b-71b9-4d2f-8169-03eec3ffa6a8"
+    - ID: "b4210849-f5e9-4f3a-9c7d-8e61975f28cf"
+      Hint: left_end_date
+      Value: 20251030T000000Z
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "bdcf5c4e-113b-44d5-b0f4-94d1d71ff933"
+      Hint: title
+      Value: Ancient Civilizations of the UAE
+    - ID: "c4e2a36e-3b63-4878-a871-260855fcdf54"
+      Hint: right_img
+      Value: |
+        <image mediaid="{6F566255-3550-4763-938B-103B2ACEAABC}" />
+    - ID: "d5c79915-bc5d-4111-8e5a-f9ea5a5dd1f8"
+      Hint: left_btnText
+      Value: Learn More
+    - ID: "d73d704e-8b5f-416a-bd84-f5ca2ae991cf"
+      Hint: right_title
+      Value: Archaeological Discoveries in Al Ain
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T163016Z
+    - ID: "e75e91df-f05b-4199-a105-b54cde08a0de"
+      Hint: right_tag
+      Value: LECTURE
+    - ID: "f9aa3a2b-56bd-4fa6-a3ee-963f7c55fdf3"
+      Hint: left_tag
+      Value: WORKSHOP
+    - ID: "fa7b7178-c844-4565-aa91-3818aa762ecf"
+      Hint: tag
+      Value: EXHIBITION

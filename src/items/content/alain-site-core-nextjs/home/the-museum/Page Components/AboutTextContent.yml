@@ -1,0 +1,45 @@
+﻿---
+ID: "44907ca2-eb29-4050-a1ed-bba77a4e662e"
+Parent: "b11464c7-ae9c-4098-8f57-b17fab462931"
+Template: "94613540-c156-4d4f-a2e4-90c86f4379c0"
+Path: "/sitecore/content/alain-site-core-nextjs/home/the-museum/Page Components/AboutTextContent"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "09902132-22fc-48ad-b77e-2853bd136e1d"
+      Hint: topHeading
+      Value: About Us
+    - ID: "109d8b42-0d91-4817-939f-c99739574acb"
+      Hint: description
+      Value: |
+        <p class="text-[18px] leading-[24px] text-[#1B1F27] font-normal mb-4" style="color: #1b1f27; background-color: #ffffff; margin-right: 0px; margin-bottom: 16px; margin-left: 0px; padding: 0px; border: 0px solid; line-height: 24px;">Al Ain Museum is ready to bring that story to life through carefully curated collections, archaeological discoveries, and cultural narratives that reflect the depth and significance of Al Ain and its wider landscape.</p>
+        <p class="text-[18px] leading-[24px] text-[#1B1F27] font-normal mb-4" style="color: #1b1f27; background-color: #ffffff; margin: 0px 0px 16px; padding: 0px; border: 0px solid; line-height: 24px;">The museum is being renewed to meet international standards, while staying true to local heritage. It will be a place for learning, reflection, and connection.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T093541Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9e841c72-7f16-4b13-9f8b-a939bc17529a"
+    - ID: "9dcd7b2f-c37b-41ed-aba5-65f68f9e4d1e"
+      Hint: heading
+      Value: Lorem Ipsum Dolor Sit Amet
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d657cf9e-fd41-488d-9e13-c504e4237f7a"
+      Hint: subHeading
+      Value: Al Ain has long been a window into the UAE’s early history.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T073512Z

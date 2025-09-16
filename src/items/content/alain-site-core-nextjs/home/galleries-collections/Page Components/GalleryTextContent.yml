@@ -1,0 +1,49 @@
+﻿---
+ID: "7fd2d05c-e657-4e47-b0f0-a1a3098deb2a"
+Parent: "c06308ee-7a7b-4c40-8277-ea1eeff79dcd"
+Template: "c4419ebc-7b2b-44e7-bf02-09189367c30e"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/Page Components/GalleryTextContent"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bd11dd-f0b3-46d4-a156-1d2822fc991c"
+      Hint: btnText
+      Value: Explore
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T105919Z
+    - ID: "2cb937d7-efb4-47d8-b800-f2526425c068"
+      Hint: topHeading
+      Value: AL AIN Galleries
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8a5e939d-910e-48ca-b9b7-bc8fb6cda41e"
+      Hint: heading
+      Value: Explore the Emirates Heritage and Culture
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5c9908b1-34eb-4d76-9b7d-52b1e8f037eb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "bd4ed0d1-f641-40c7-a158-80f6144483cb"
+      Hint: description
+      Value: |
+        Discover the rich heritage of Al Ain through immersive galleries
+        showcasing archaeology, ethnography, and traditional Emirati life.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T111802Z
+    - ID: "e9c065ce-6b40-4303-94e7-442a3c9a3e3d"
+      Hint: btnLink
+      Value: |
+        <link text="galleries-collection" anchor="" linktype="internal" class="" title=""  querystring="" id="{4D2615A3-6B63-44BC-9E29-DDD23CFBAD56}" />

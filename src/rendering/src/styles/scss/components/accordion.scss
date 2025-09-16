@@ -1,0 +1,102 @@
+.map-accordion {
+    .px-2.w-full {
+        padding: 0;
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #1B1F27;
+
+        h2 {
+            margin-bottom: 0;
+
+            button {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 24px 0;
+                cursor: pointer;
+
+                &:focus {
+                    outline: none;
+                }
+
+                .flex-1.flex.flex-col.text-start {
+                    width: calc(100% - 36px);
+                }
+
+                .text-foreground {
+                    font-family: 'Big Caslon', sans-serif;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 32px;
+                    color: #1B1F27;
+                    text-align: left;
+                    display: block;
+                    width: 100%;
+                }
+
+                span {
+                    &[aria-hidden="true"] {
+                        position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        transform: rotate(180deg);
+                        font-size: 32px;
+                        display: flex;
+                        transition: 0.4s;
+                        color: #757575;
+
+                        svg {
+                            display: none;
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 32px;
+                            height: 32px;
+                            background-image: url("/images/accordion-arrow.svg");
+                        }
+
+                        &[data-open="true"] {
+                            transform: rotate(0);
+                            color: #1b1f27;
+                        }
+                    }
+                }
+            }
+        }
+
+        section {
+            .content {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 120%;
+                margin-bottom: 16px;
+                color: #1B1F27;
+                line-height: 28px;
+            }
+        }
+    }
+
+    hr {
+        display: none;
+    }
+}
+
+html[lang="ar-ae"] {
+    .map-accordion {
+        .accordion-item {
+            h2 {
+                button {
+                    .text-foreground {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+﻿---
+ID: "e71e8223-389a-4454-8ed6-cb71ea5ffcf4"
+Parent: "b57fc734-18c0-4291-ac32-fbc90a2060f2"
+Template: "48fbda42-a01b-4f44-a4e5-9429521547a3"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/collection-highlight/Page Components/GalleryPreviewSlider/GalleryPreviewData1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25473b86-42be-49a9-a11f-f2083034b866"
+      Hint: img
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{A8FF3A28-7F12-4FD6-954E-784DDF89509E}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T174544Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8acb1f57-bb35-473f-87e1-6bc18920f305"
+      Hint: heading
+      Value: Collection Highlights
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "eb6a3703-7744-4a26-9270-46b411362284"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d941346f-0caf-4606-93e8-0c063904e09b"
+      Hint: subHeading
+      Value: Timeless Treasures Beneath the Sands
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T191051Z
+    - ID: "ee89d4a6-6b25-4966-a67e-fd86bac8d578"
+      Hint: description
+      Value: Step into the rhythms of traditional Emirati life through objects once used in homes, markets, and desert camps. Each piece offers a vivid glimpse into a way of life both humble and remarkable.

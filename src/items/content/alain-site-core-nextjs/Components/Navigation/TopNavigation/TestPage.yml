@@ -1,0 +1,56 @@
+﻿---
+ID: "28256694-88d7-47b0-a7c1-afbb7df7817f"
+Parent: "4ce39966-6af5-4655-ac35-e209a1af0ccf"
+Template: "680f67ab-12b8-4e48-8e48-089dfe224aa1"
+Path: "/sitecore/content/alain-site-core-nextjs/Components/Navigation/TopNavigation/TestPage"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: "ar-AE"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250915T101944Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7d7d0986-6bfc-48d4-81bd-13de8ce0920c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T101944Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T151206Z
+    - ID: "5d99734f-d998-4e7d-ae93-80782a30920d"
+      Hint: link
+      Value: |
+        <link text="TestPage" anchor="" linktype="internal" class="" title=""  querystring="" id="{7C20C9A9-B2D7-4DC0-9440-AC96E14325D3}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d3ca0e8c-1471-4137-981a-6eb15dd713f6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T235759Z

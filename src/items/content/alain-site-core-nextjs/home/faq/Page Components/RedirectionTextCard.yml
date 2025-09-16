@@ -1,0 +1,44 @@
+﻿---
+ID: "594bd021-23ea-4e8b-901c-f229afaeed46"
+Parent: "de736e9c-1c23-413a-8ad4-6ff241a59b14"
+Template: "96847042-a0ba-47f1-a763-14a20a05e280"
+Path: "/sitecore/content/alain-site-core-nextjs/home/faq/Page Components/RedirectionTextCard"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T131102Z
+    - ID: "3feeefa0-539d-45a5-8ab4-3318a5a72669"
+      Hint: heading
+      Value: "Have Questions?"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "585bb5cc-ec5e-473c-8022-8bdb60a57763"
+      Hint: description
+      Value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis purus quis libero sollicitudin iaculis. Ut vel viverra odio.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "5f40dd9b-e36e-45e7-9ecf-7a7cd784767a"
+      Hint: btnLink
+      Value: |
+        <link text="contact us" anchor="" linktype="internal" class="" title=""  querystring="" id="{F5DA2178-5D26-42D5-B0C4-4245FB34DDA2}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c38c632d-f891-4790-afa8-f668625bfd92"
+    - ID: "b0368915-6c18-46e3-b830-5c5c37bececf"
+      Hint: btnText
+      Value: Contact Us
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T131607Z

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@sitecore-cloudsdk/events": "^0.5.4",
+    "lucide-react": "^0.523.0"
+  }
+}

@@ -1,0 +1,46 @@
+﻿---
+ID: "e1f55328-a172-4103-bf16-13d352a83ca8"
+Parent: "e3bbd8ff-7a26-4d27-9add-8dfcb081e692"
+Template: "fd69e30c-63fd-421e-948f-f8d640ce7dbc"
+Path: "/sitecore/content/alain-site-core-nextjs/home/visit/Page Components/OpeningHours"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "21f3500e-c069-485e-870e-193d466b29e9"
+      Hint: heading
+      Value: Opening Hours
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T122746Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "24978b98-2c94-4ee6-a6ac-35173530c81b"
+    - ID: "b0fd6112-6bfd-4d0c-8cc4-97afbfc418fe"
+      Hint: subHeading
+      Value: Check our opening hours so you can make the most of your experience.
+    - ID: "b225b70e-06e0-4d01-b086-0448371f643b"
+      Hint: content
+      Value: |
+        Galleries & Exhibitions:
+        Monday — Closed
+        Tuesday – Thursday: 10am – 6:30pm*
+        Friday – Sunday: 10am – 8:30pm*
+        
+        *Last Entry 15 mins prior to Galleries and Exhibition closure.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T070529Z

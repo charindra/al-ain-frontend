@@ -1,0 +1,38 @@
+﻿---
+ID: "0d6b62d9-704c-425d-a4ae-99c303f8e2e4"
+Parent: "4869e7af-b60a-4c15-af14-c677e00cdcb9"
+Template: "726202a5-b321-4f74-b203-68111b0fb6dd"
+Path: "/sitecore/content/alain-site-core-nextjs/home/founding-father/Page Components/PageBreadcrumb/PageBreadCrumbItem1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250915T063535Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bd8f3b39-fb81-45f6-81a8-54e229b095ea"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d14eb5a9-f671-4863-bb52-ebfe563cfa59"
+      Hint: fieldName
+      Value: Home
+    - ID: "d92b517b-7235-4927-8bef-745347ed3679"
+      Hint: link
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{9514E9E1-BBCA-4FE5-9903-0A80470C184B}" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T063558Z

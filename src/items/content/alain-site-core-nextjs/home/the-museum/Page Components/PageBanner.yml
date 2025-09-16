@@ -1,0 +1,38 @@
+﻿---
+ID: "761d6d43-c2a3-4cd8-9b14-cec68819e933"
+Parent: "b11464c7-ae9c-4098-8f57-b17fab462931"
+Template: "4cf0dd8c-7a19-489e-9b8e-1b5a5c01be1a"
+Path: "/sitecore/content/alain-site-core-nextjs/home/the-museum/Page Components/PageBanner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T124128Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "36236acb-7ef7-45dd-b0b8-6cb32a5f419e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "cd80eb6d-9738-4e6f-9246-1174bfe86055"
+      Hint: title
+      Value: The Museum
+    - ID: "d24048e7-d4f6-49d9-876c-f13f5c2c9a4f"
+      Hint: image
+      Value: |
+        <image mediaid="{3EAD7A87-103E-45B4-88C5-5DAC962F3841}" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T124621Z

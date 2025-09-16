@@ -1,0 +1,49 @@
+﻿---
+ID: "1b2a3049-5eba-4e67-88ea-535535953cb8"
+Parent: "430b3371-3f11-48a1-9b0f-9675695c5161"
+Template: "dccbc895-a42f-47cb-a92b-b0d1a930e6e9"
+Path: "/sitecore/content/alain-site-core-nextjs/home/TestPage/Page Components/New Year Promotion"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250912T193041Z
+    - ID: "39e3dd3b-0390-4267-a08c-33b8059d07b8"
+      Hint: mobileImage
+      Value: |
+        <image mediaid="{04DAD0FD-DB66-4070-881F-17264CA257E1}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zaheer
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zaheer
+    - ID: "77ac4b67-7aa1-4f82-8579-f1eeab581ea3"
+      Hint: ctaButton
+      Value: |
+        <link text="Book Tickets" anchor="" linktype="internal" class="" title=""  querystring="" id="{9514E9E1-BBCA-4FE5-9903-0A80470C184B}" />
+    - ID: "8914eda3-500b-4d3b-b556-5d061028c086"
+      Hint: desktopImage
+      Value: |
+        <image mediaid="{094AED03-02E7-4868-80CB-19926661FB77}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2067a38f-efe0-46f5-94b5-e37644b14546"
+    - ID: "9b31afe1-63a4-44a3-aac4-3387a83f06b8"
+      Hint: heading
+      Value: Hello from Copy of ExploreBottomSection
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "bfec2ce1-f2e8-47ee-a2e6-743acbd0602a"
+      Hint: description
+      Value: Copy of ExploreBottomSection <em><strong>Description Description Description Description Description</strong></em>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250912T200023Z

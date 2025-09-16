@@ -1,0 +1,45 @@
+﻿---
+ID: "272807e7-851f-4726-9c58-09a829873767"
+Parent: "430b3371-3f11-48a1-9b0f-9675695c5161"
+Template: "d8a39b46-4208-4718-ba73-caa0a45b616d"
+Path: "/sitecore/content/alain-site-core-nextjs/home/TestPage/Page Components/HeroBanner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250912T142724Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5bc898fd-6cdf-4bc8-9b68-cca953b25ddc"
+      Hint: heading
+      Value: Welcome to Al Ain Museum from Sitecore
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "5fe2315f-f487-42c0-bb0c-ae66cbd64d89"
+      Hint: heroImages
+      Value: |
+        {EFD773A5-36D2-4C2E-B91D-FED8C2B41A31}
+        {2E6152C8-A573-4DD9-93A0-8B778280579A}
+        {42FFB191-DC9D-491E-A6C1-7BF2E283636E}
+        {DFEDDE39-1755-4833-9CC0-1D9674A357A7}
+        {2F772050-7EEA-4ED1-B2A4-52548976E9DB}
+    - ID: "6b6374eb-35aa-4c97-b56e-09a0f28e4887"
+      Hint: subHeading
+      Value: Discover the rich heritage of Al Ain from Sitecore
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4ac0e5ab-4b2b-4a86-9428-5e0b3fdd6549"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250912T145330Z

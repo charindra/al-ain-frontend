@@ -1,0 +1,37 @@
+﻿---
+ID: "565b6db3-1927-4fc9-8bdc-fb1e75708283"
+Parent: "0eb12d6e-c5c0-4b39-bf27-3d49e9ead1ef"
+Template: "84292405-79ce-4356-aaf5-e5cb18104841"
+Path: "/sitecore/content/alain-site-core-nextjs/home/faq/Page Components/FaqList/FaqListItem2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T173256Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "07569957-e421-4c46-90e1-99b66b379cc9"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T185701Z
+    - ID: "db0750b2-1c48-43ef-9cf1-4d6b29c554fe"
+      Hint: answer
+      Value: "While the museum is under development, we may host select off-site events or digital programmes. Please check our official channels for any upcoming announcements."
+    - ID: "e22b2b7d-03ee-4ff0-9c10-b268da5232db"
+      Hint: question
+      Value: "Can I visit the site before it opens?"

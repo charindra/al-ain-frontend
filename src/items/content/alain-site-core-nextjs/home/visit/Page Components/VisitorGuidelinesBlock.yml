@@ -1,0 +1,43 @@
+﻿---
+ID: "5bd28ae1-16f7-4015-8c84-c0785f9682f3"
+Parent: "e3bbd8ff-7a26-4d27-9add-8dfcb081e692"
+Template: "b32d13a7-483a-4a72-b413-d0e993f88b44"
+Path: "/sitecore/content/alain-site-core-nextjs/home/visit/Page Components/VisitorGuidelinesBlock"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e7dc2f7-81ce-479e-8f97-0d232a7fe353"
+      Hint: heading
+      Value: Lorem Ipsum Dolor Sit Amet
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T123309Z
+    - ID: "4012078d-4cc2-4930-84fa-df78734da4b3"
+      Hint: description
+      Value: We look forward to welcoming you to Al Ain Museum. All visitors entering the museum agree to abide by the Visitor Regulations for their own safety and enjoyment, and that of others.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a825ab76-fe58-4a9c-9151-c80778af05b7"
+    - ID: "a908fa27-a772-453c-aa05-6bb04a2c86db"
+      Hint: topHeading
+      Value: VISITOR GUIDELINES
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "cf60029b-d94e-4240-bf8a-7ffe398ce07e"
+      Hint: btnText
+      Value: Guidelines
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T123633Z

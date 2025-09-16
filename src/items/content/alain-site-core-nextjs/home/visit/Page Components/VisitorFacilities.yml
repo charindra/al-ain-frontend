@@ -1,0 +1,43 @@
+﻿---
+ID: "484c7037-22fa-40ca-8b6d-0719c53ca94a"
+Parent: "e3bbd8ff-7a26-4d27-9add-8dfcb081e692"
+Template: "0dede083-b3e3-4de8-bc8d-1dd46e7bc745"
+Path: "/sitecore/content/alain-site-core-nextjs/home/visit/Page Components/VisitorFacilities"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0bdd318d-bfba-4373-af25-8a0ae032e871"
+      Hint: sectionHeading
+      Value: Food and Retail
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T171415Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "81a23ac7-afb4-4f1d-be7f-9732d6c9ad73"
+      Hint: sectionContent
+      Value: Lorem ipsum dolor sit amet consectetur. Id tristique sed donec tellus. Platea in risus scelerisque congue. Consequat pellentesque egestas consequat sed phasellus tincidunt nisl nisl.
+    - ID: "826e619e-4377-42e2-91d2-31ecc12c21c5"
+      Hint: subHeading
+      Value: Services To Better Your Experience
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "025326a5-7c60-4b17-8ad8-6ee0f984677c"
+    - ID: "96b913c4-2fe3-46f7-ad25-4606e1db286b"
+      Hint: heading
+      Value: VISITOR FACILITIES & AMENITIES
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T180232Z

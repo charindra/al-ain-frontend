@@ -1,0 +1,192 @@
+﻿---
+ID: "9514e9e1-bbca-4fe5-9903-0a80470c184b"
+Parent: "a66e1d91-2da3-4e51-846b-af3fa03bd779"
+Template: "03c779fc-2819-4bd3-b293-a3b982b4eb1e"
+Path: "/sitecore/content/alain-site-core-nextjs/home"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{05418581-E6A2-46AC-BDBF-C222703A6F0D}"
+          s:ccb="Clear on publish"
+          s:ds="{4CE39966-6AF5-4655-AC35-E209A1AF0CCF}"
+          s:par="CSSStyles" />
+      </d>
+    </r>
+Languages:
+- Language: "ar-AE"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{ACA1BD09-B59B-449F-A32E-3889D60D7CB0}">
+              <p:d />
+            </r>
+            <r
+              uid="{4C326F5E-7F7A-43A1-B24F-0E937D2984B0}"
+              p:after="r[@uid='{05418581-E6A2-46AC-BDBF-C222703A6F0D}']"
+              s:ds="{C6912E0E-7150-4CC4-84AC-5BCBE068EFA5}"
+              s:id="{8083C43D-06F4-4116-BD24-6606ADCD3877}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{4503636B-6BE2-4A69-BADC-521CAE35E462}"
+              p:after="r[@uid='{4C326F5E-7F7A-43A1-B24F-0E937D2984B0}']"
+              s:id="{7DBD8A50-8358-4580-91CE-6F02671141F4}"
+              s:ph="jss-main" />
+            <r
+              uid="{66DDBBFD-42E8-439C-BF04-784FE26C6A62}"
+              p:after="r[@uid='{4503636B-6BE2-4A69-BADC-521CAE35E462}']"
+              s:id="{D849F52C-3325-47F6-A35A-68AC5559A7C2}"
+              s:ph="jss-main" />
+            <r
+              uid="{7E6FF610-B03B-464F-B6C6-518BD401B316}"
+              p:after="r[@uid='{66DDBBFD-42E8-439C-BF04-784FE26C6A62}']"
+              s:id="{5531ED7F-0B83-4AE0-8C92-5B414E039903}"
+              s:ph="jss-main" />
+            <r
+              uid="{BA89478B-E164-4F71-BA6F-2CED880827D2}"
+              p:after="r[@uid='{7E6FF610-B03B-464F-B6C6-518BD401B316}']"
+              s:ds="{F79BB364-EA5B-4F24-8684-EA29ADCC98AE}"
+              s:id="{8965C175-B431-47D5-8CE1-5B195EBE3404}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{E2793688-6D37-41CE-B131-64B6CA7B0BB0}"
+              p:after="*[1=2]"
+              s:ds="{6DB872C7-F60C-4930-94FB-159DA01891A3}"
+              s:id="{A02EFEFF-E1C9-4449-B5F7-E7AC79FD296B}"
+              s:par="CSSStyles"
+              s:ph="jss-footer"
+              s:ccb="Clear on publish" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T123303Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ee0476ad-3d84-46cc-aacd-d4d10d447de8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T001321Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{ACA1BD09-B59B-449F-A32E-3889D60D7CB0}">
+              <p:d />
+            </r>
+            <r
+              uid="{4C326F5E-7F7A-43A1-B24F-0E937D2984B0}"
+              p:after="r[@uid='{05418581-E6A2-46AC-BDBF-C222703A6F0D}']"
+              s:ds="{C6912E0E-7150-4CC4-84AC-5BCBE068EFA5}"
+              s:id="{8083C43D-06F4-4116-BD24-6606ADCD3877}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{4503636B-6BE2-4A69-BADC-521CAE35E462}"
+              p:after="r[@uid='{4C326F5E-7F7A-43A1-B24F-0E937D2984B0}']"
+              s:ds="{688AEF5E-62B6-4114-BE75-CE5928CCC655}"
+              s:id="{7DBD8A50-8358-4580-91CE-6F02671141F4}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{66DDBBFD-42E8-439C-BF04-784FE26C6A62}"
+              p:after="r[@uid='{4503636B-6BE2-4A69-BADC-521CAE35E462}']"
+              s:ds="{E7125152-388F-49F6-BB6A-4F828E22E3BA}"
+              s:id="{D849F52C-3325-47F6-A35A-68AC5559A7C2}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{7E6FF610-B03B-464F-B6C6-518BD401B316}"
+              p:after="r[@uid='{66DDBBFD-42E8-439C-BF04-784FE26C6A62}']"
+              s:ds="{4E294AC6-B26B-4FD1-861A-94CF2F658623}"
+              s:id="{5531ED7F-0B83-4AE0-8C92-5B414E039903}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{BA89478B-E164-4F71-BA6F-2CED880827D2}"
+              p:after="r[@uid='{7E6FF610-B03B-464F-B6C6-518BD401B316}']"
+              s:ds="{F79BB364-EA5B-4F24-8684-EA29ADCC98AE}"
+              s:id="{8965C175-B431-47D5-8CE1-5B195EBE3404}"
+              s:par="CSSStyles"
+              s:ph="jss-main"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{E2793688-6D37-41CE-B131-64B6CA7B0BB0}"
+              p:after="*[1=2]"
+              s:ds="{6DB872C7-F60C-4930-94FB-159DA01891A3}"
+              s:id="{A02EFEFF-E1C9-4449-B5F7-E7AC79FD296B}"
+              s:par="CSSStyles"
+              s:ph="jss-footer"
+              s:ccb="Clear on publish" />
+          </d>
+        </r>
+    - ID: "17ce1170-0a10-52f4-9c1f-8db0359d595b"
+      Hint: metaPageTitle
+      Value: Al Ain Museum
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250530T094224Z
+    - ID: "7b4f29df-b877-46dd-a324-8d0564c39686"
+      Hint: metaDescription
+      Value: At Al Ain Museum, the story begins. Join us on a journey through archaeological discoveries and historical milestones that reveal how life evolved in Al Ain and bring the story of this land to light like never before.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "324bbfe2-f54a-4773-8f17-273d06a8a38f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T113312Z
+    - ID: "ea356307-ee9a-416c-a833-5e84c85d3d8f"
+      Hint: metaShareImage
+      Value: |
+        <image mediaid="{094AED03-02E7-4868-80CB-19926661FB77}" />
+    - ID: "fff0f5c0-eade-404a-933d-735c07abc167"
+      Hint: metaKeywords
+      Value: al ain, meuseum

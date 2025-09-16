@@ -1,0 +1,36 @@
+{
+    "namespace": "alain-site-core-nextjs",
+    "references": [ "InitItems" ],
+    "items": {
+      "includes": [
+        {
+          "name": "layouts",
+          "path": "/sitecore/layout/Layouts/Project/alain-site-core-nextjs"
+        },
+        {
+          "name": "placeholders",
+          "path": "/sitecore/layout/Placeholder Settings/Project/alain-site-core-nextjs"
+        },
+        {
+          "name": "renderings",
+          "path": "/sitecore/layout/Renderings/Project/alain-site-core-nextjs"
+        },
+        {
+          "name": "renderings-feature",
+          "path": "/sitecore/layout/Renderings/Feature"
+        },
+        {
+          "name": "templates",
+          "path": "/sitecore/templates/Project/alain-site-core-nextjs"
+        },
+        {
+          "name": "templates-feature",
+          "path": "/sitecore/templates/Feature"
+        },
+        {
+          "name": "foundation",
+          "path": "/sitecore/templates/Foundation"
+        }
+      ]
+    }
+}

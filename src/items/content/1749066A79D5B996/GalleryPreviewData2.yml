@@ -1,0 +1,44 @@
+﻿---
+ID: "68f842bd-ecd6-44a8-be01-10603e30f927"
+Parent: "b57fc734-18c0-4291-ac32-fbc90a2060f2"
+Template: "48fbda42-a01b-4f44-a4e5-9429521547a3"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/collection-highlight/Page Components/GalleryPreviewSlider/GalleryPreviewData2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25473b86-42be-49a9-a11f-f2083034b866"
+      Hint: img
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{7CBD455C-14A6-4C3F-9405-5B3D25C2ED7A}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T174557Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8acb1f57-bb35-473f-87e1-6bc18920f305"
+      Hint: heading
+      Value: Inside Conservation Lab
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c6ec86e0-5936-4f23-9d69-a56e4bf86a6d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d941346f-0caf-4606-93e8-0c063904e09b"
+      Hint: subHeading
+      Value: Where History Is Preserved And Protected
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T191114Z
+    - ID: "ee89d4a6-6b25-4966-a67e-fd86bac8d578"
+      Hint: description
+      Value: Behind the scenes, experts work tirelessly to preserve and protect Al Ain’s invaluable artifacts. Through careful conservation, the museum ensures these cultural treasures endure for generations to come.

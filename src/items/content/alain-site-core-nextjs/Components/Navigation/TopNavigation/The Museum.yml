@@ -1,0 +1,52 @@
+﻿---
+ID: "fe441fd1-9eff-4e34-a6dc-720f0683732e"
+Parent: "4ce39966-6af5-4655-ac35-e209a1af0ccf"
+Template: "680f67ab-12b8-4e48-8e48-089dfe224aa1"
+Path: "/sitecore/content/alain-site-core-nextjs/Components/Navigation/TopNavigation/The Museum"
+Languages:
+- Language: "ar-AE"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250915T101939Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0daeb415-86d7-4682-bf97-673cf68a7457"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T101939Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T151206Z
+    - ID: "5d99734f-d998-4e7d-ae93-80782a30920d"
+      Hint: link
+      Value: |
+        <link text="The Museum" anchor="" linktype="internal" class="" title=""  querystring="" id="{13BC5415-29F2-4D24-A85C-CF88DE395A21}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c37bf684-7523-4489-b434-266fd5682913"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T235759Z

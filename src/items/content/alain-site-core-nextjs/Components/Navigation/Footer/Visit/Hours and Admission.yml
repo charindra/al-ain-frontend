@@ -1,0 +1,39 @@
+﻿---
+ID: "9718a199-d420-41b2-92f2-c5717b2c0de1"
+Parent: "e88a9f4c-528a-49ee-9f8f-22013b5ad683"
+Template: "36403ab6-df17-4f74-a482-f945772590d4"
+Path: "/sitecore/content/alain-site-core-nextjs/Components/Navigation/Footer/Visit/Hours and Admission"
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 25
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T184402Z
+    - ID: "3b16b1d0-bc80-448f-a2cc-3f0aaaa15480"
+      Hint: link
+      Value: |
+        <link text="Hours &amp; Admission" anchor="" linktype="internal" class="" title=""  querystring="" id="{9514E9E1-BBCA-4FE5-9903-0A80470C184B}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zaheer
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zaheer
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b069fcbb-3ddb-4705-9b44-3f2e4ce5f658"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T235806Z

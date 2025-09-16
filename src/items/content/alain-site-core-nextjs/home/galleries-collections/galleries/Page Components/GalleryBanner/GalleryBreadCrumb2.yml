@@ -1,0 +1,38 @@
+﻿---
+ID: "566fce8f-0547-4567-adfc-56ecf3cb43a7"
+Parent: "7dd30e7b-b62e-4224-a563-9e9b68840732"
+Template: "c8616541-e7ae-406b-aa20-50e14edb944d"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/galleries/Page Components/GalleryBanner/GalleryBreadCrumb2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T165854Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a232f5f7-5ab0-41c1-b55a-95be5319ec3f"
+    - ID: "b51facfc-10ec-49cb-949f-869594474e93"
+      Hint: link
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{4D2615A3-6B63-44BC-9E29-DDD23CFBAD56}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T185114Z
+    - ID: "e402cbfd-556d-4d79-ab7c-1498dcf7c1f9"
+      Hint: name
+      Value: Galleries & Collections

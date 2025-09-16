@@ -1,0 +1,13 @@
+﻿---
+ID: "0e822bbb-b8d6-44af-89aa-81f9e8375b0f"
+Parent: "b937d76d-916b-4b23-af9b-eb6753825a15"
+Template: "b937d76d-916b-4b23-af9b-eb6753825a15"
+Path: /sitecore/templates/Foundation/Common/_Base/_Metadata/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "17ce1170-0a10-52f4-9c1f-8db0359d595b"
+      Hint: metaPageTitle
+      Value: $name

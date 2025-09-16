@@ -1,0 +1,39 @@
+﻿---
+ID: "65487abd-4f8f-41d4-84ae-0ab2d9791a8d"
+Parent: "c06308ee-7a7b-4c40-8277-ea1eeff79dcd"
+Template: "18788750-bae3-43ea-aed2-11ff813e2b93"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/Page Components/GalleryInlineImage"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "09a628de-63da-4150-a04b-1f0776cae9a7"
+      Hint: rightImg
+      Value: |
+        <image mediaid="{280DDD4E-4DC0-4690-B4BF-1171186B8C3E}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T111922Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5942042b-badc-4372-95bf-76ff4becd483"
+      Hint: leftImg
+      Value: |
+        <image mediaid="{08C21B13-DB73-48A8-9AF0-D59F17CB1A0C}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0310ebe6-84fa-4e78-a148-1327d9539af0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T112316Z

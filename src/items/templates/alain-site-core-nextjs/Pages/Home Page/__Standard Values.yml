@@ -1,0 +1,55 @@
+﻿---
+ID: "b13158cf-6be3-4605-85d9-f2209c11d14c"
+Parent: "03c779fc-2819-4bd3-b293-a3b982b4eb1e"
+Template: "03c779fc-2819-4bd3-b293-a3b982b4eb1e"
+Path: "/sitecore/templates/Project/alain-site-core-nextjs/Pages/Home Page/__Standard Values"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{4F760EC1-A659-4214-BF87-D4F38FA41975}">
+        <r
+          ds="{4CE39966-6AF5-4655-AC35-E209A1AF0CCF}"
+          id="{CDCCAD46-9B35-4EDC-A4C5-B8DF3C65A482}"
+          par="CSSStyles"
+          ph="jss-header"
+          uid="{05418581-E6A2-46AC-BDBF-C222703A6F0D}"
+          ccb="Clear on publish" />
+        <r
+          ds="{6DB872C7-F60C-4930-94FB-159DA01891A3}"
+          id="{A02EFEFF-E1C9-4449-B5F7-E7AC79FD296B}"
+          par="CSSStyles"
+          ph="jss-footer"
+          uid="{ACA1BD09-B59B-449F-A32E-3889D60D7CB0}"
+          ccb="Clear on publish" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T231341Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zaheer
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zaheer
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e4903b4a-bff0-42b0-9204-4e8f180efe63"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T231425Z

@@ -1,0 +1,38 @@
+﻿---
+ID: "df96de0b-b46e-43cd-a303-8a201c13130b"
+Parent: "62ad57ab-1b9b-4578-9ab4-81d46a26f292"
+Template: "4cf0dd8c-7a19-489e-9b8e-1b5a5c01be1a"
+Path: "/sitecore/content/alain-site-core-nextjs/home/al-ain/Page Components/PageBanner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T101047Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "88707a7b-0551-4a1b-9284-a9597accaeea"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "cd80eb6d-9738-4e6f-9246-1174bfe86055"
+      Hint: title
+      Value: Visit
+    - ID: "d24048e7-d4f6-49d9-876c-f13f5c2c9a4f"
+      Hint: image
+      Value: |
+        <image mediaid="{8D1BC666-9AAD-47D7-8C04-5D32206758D7}" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T103825Z

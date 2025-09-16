@@ -1,0 +1,49 @@
+﻿---
+ID: "f79bb364-ea5b-4f24-8684-ea29adcc98ae"
+Parent: "cc09e20c-06d1-4a43-8a75-dc64301cc677"
+Template: "dccbc895-a42f-47cb-a92b-b0d1a930e6e9"
+Path: "/sitecore/content/alain-site-core-nextjs/home/Page Components/ExploreBottomSection"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250912T193041Z
+    - ID: "39e3dd3b-0390-4267-a08c-33b8059d07b8"
+      Hint: mobileImage
+      Value: |
+        <image mediaid="{BD4863AE-8D33-4C52-9584-DB5A97AF969B}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zaheer
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zaheer
+    - ID: "77ac4b67-7aa1-4f82-8579-f1eeab581ea3"
+      Hint: ctaButton
+      Value: |
+        <link text="Book Tickets" anchor="" linktype="internal" class="" title=""  querystring="" id="{9514E9E1-BBCA-4FE5-9903-0A80470C184B}" />
+    - ID: "8914eda3-500b-4d3b-b556-5d061028c086"
+      Hint: desktopImage
+      Value: |
+        <image mediaid="{1941BA97-E685-442F-AF06-8BBA1A7719FD}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a719b951-a89f-4a8f-96c4-14d64a74b379"
+    - ID: "9b31afe1-63a4-44a3-aac4-3387a83f06b8"
+      Hint: heading
+      Value: Explore, Learn, Experience from Sitecore
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zaheer
+    - ID: "bfec2ce1-f2e8-47ee-a2e6-743acbd0602a"
+      Hint: description
+      Value: "Sitecore: Step into the story of the UAE through its treasured heritage and timeless artifacts at Al Ain Museum."
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250912T200106Z

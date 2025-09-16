@@ -1,0 +1,366 @@
+a[target='_blank']:after {
+  content: '\1F5D7';
+}
+
+/*
+  Hides Sitecore editor markup,
+  if you run the app in connected mode while the Sitecore cookies
+  are set to edit mode.
+*/
+.scChromeData,
+.scpm {
+  display: none !important;
+}
+
+/*
+  Styles for default JSS error components
+*/
+.sc-jss-editing-error,
+.sc-jss-placeholder-error {
+  padding: 1em;
+  background-color: lightyellow;
+}
+
+/* 
+  Style for default content block
+*/
+.contentTitle {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* /////////////////////////////////////// */
+@font-face {
+  font-family: 'guggenheim_sansregular';
+  src: url('./web-fonts/guggenheimsans-regular-webfont.woff2') format('woff2'),
+    url('./web-fonts/guggenheimsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* color */
+  --color-01: #000000;
+  --color-02: #ffffff;
+  --color-ho: #bf3447;
+
+  /* fonts */
+  --primary-font: 'guggenheim_sansregular', arial;
+
+  /* fonts size */
+  --f-size-01: 16px;
+  --f-size-02: 18px;
+  --f-size-03: 20px;
+  --f-size-04: 22px;
+  --f-size-05: 24px;
+  --f-size-06: 26px;
+
+  --f-size-h1: 110px;
+  --f-size-h2: 64px;
+  --f-size-h3: 40px;
+  --f-size-h4: 32px;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: var(--f-size-01);
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 85px;
+}
+
+/* base layout */
+h3 {
+  font-size: var(--f-size-h3);
+  color: var(--color-01);
+  font-weight: 600;
+}
+.sm-text {
+  font-size: 16px;
+}
+.md-text {
+  font-size: 20px;
+}
+.container {
+  max-width: 1440px;
+}
+.border-bottom {
+  border-bottom: 1px solid var(--color-01) !important;
+}
+.border-left {
+  border-left: 1px solid var(--color-01) !important;
+}
+
+a {
+  color: var(--color-01);
+}
+a:hover {
+  color: var(--color-ho);
+}
+button.btn-primary,
+a.btn-primary {
+  background: var(--color-01);
+  color: var(--color-02);
+  font-size: var(--f-size-01);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 0;
+}
+button.btn-primary:hover,
+a.btn-primary:hover {
+  background: var(--color-ho);
+}
+
+/* header */
+.fixed-top {
+  padding: 0;
+}
+.navbar {
+  padding: 15px 24px;
+  background: var(--color-02);
+}
+.nav-link {
+  font-weight: 600;
+  margin: 0 10px;
+  letter-spacing: 0.16px;
+  color: var(--color-01);
+}
+.nav-link:hover {
+  color: var(--color-ho);
+}
+.form-switch {
+  padding-left: 80px;
+  position: relative;
+}
+.custom-label {
+  position: absolute;
+  left: 15px;
+  font-size: var(--f-size-02);
+}
+.custom-control-label {
+  font-weight: 600;
+  letter-spacing: 0.16px;
+}
+.form-check-input:checked {
+  background-color: #000000;
+  border-color: #000000;
+}
+.hero-logos .mobile-logo {
+  display: none;
+}
+.mobile-trigger {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+}
+
+footer.container {
+  border-top: 1px solid var(--color-01);
+}
+.footer-blocks {
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.email-input {
+  width: calc(100% - 120px);
+}
+.email-input input {
+  height: 56px;
+  border-radius: 0;
+  border: 1px solid var(--color-01);
+}
+.footer-connected-logo {
+  margin-top: auto;
+}
+.footer-connected-logo img {
+  max-width: 400px;
+  width: 90%;
+}
+.helpful-links {
+  padding: 10px 0 20px;
+  margin: 0;
+  margin-bottom: auto;
+}
+.helpful-links li {
+  list-style: none;
+  padding: 10px 0;
+}
+.helpful-links li a {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.follow-us {
+  padding: 0;
+  margin: 0;
+}
+.follow-us li {
+  display: inline-block;
+  padding: 20px 20px 0 0;
+}
+.footer-map-section {
+  padding: 0 !important;
+  position: relative;
+}
+.footer-map-section img {
+  width: 100%;
+}
+.footer-map-section .btn-primary {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.footer-map-section img.gad-pin-img {
+  position: absolute;
+  top: 72px;
+  left: calc(50% - 32px);
+  width: 64px;
+}
+.copyright {
+  border-top: 1px solid var(--color-01);
+  margin: 0 -12px;
+}
+.copyright p {
+  padding: 0;
+  margin: 0;
+  padding: 50px 0;
+}
+.copyright p.copyright-text {
+  padding-left: 30px;
+}
+.copyright a {
+  text-decoration: underline;
+  margin-right: 30px;
+  margin-left: -15px;
+}
+@media screen and (max-width: 1024px) {
+  .hero-logos .mobile-logo {
+    display: block;
+  }
+  .hero-logos .desktop-logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fixed-top {
+    height: 86px;
+  }
+  .navbar {
+    padding: 15px 16px;
+  }
+  .navbar .btn-primary {
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    font-size: 12px;
+    height: 40px;
+  }
+  .hero-logos {
+    position: absolute;
+    left: 16px;
+    top: 22px;
+  }
+  .mobile-trigger {
+    display: block;
+    position: absolute;
+    height: 40px;
+    width: 200px;
+    right: 170px;
+    top: 22px;
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .open-mobile-mneu,
+  .close-mobile-mneu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    padding: 0;
+    border: 0;
+  }
+  .mobile-menu .close-mobile-mneu {
+    transform: rotate(180deg);
+  }
+  .open-mobile-mneu:focus-visible,
+  .open-mobile-mneu:focus,
+  .close-mobile-mneu:focus-visible,
+  .close-mobile-mneu:focus {
+    border: 0;
+    outline: none;
+  }
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: -527px;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transition: top 0.8s cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  }
+  .mobile-menu.show-mobile-menu {
+    top: 0;
+  }
+  .mobile-menu-logo {
+    position: absolute;
+    left: 16px;
+    top: 22px;
+  }
+  .mobile-menu-header {
+    height: 85px;
+    border-bottom: 1px solid var(--color-01);
+  }
+  .mobile-menu-footer {
+    height: 85px;
+    border-top: 1px solid var(--color-01);
+    text-align: right;
+    padding: 20px 16px 0 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .mobile-menu-list {
+    padding: 20px 10px;
+  }
+  .mobile-menu-list .nav-link {
+    font-size: 32px;
+    line-height: 1.12;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+  .mobile-menu-list .custom-control {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .mobile-menu-overlay {
+    background: #00000025;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 1;
+  }
+  .active .nav-link {
+    color: var(--color-ho);
+  }
+}

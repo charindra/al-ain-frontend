@@ -1,0 +1,31 @@
+﻿---
+ID: "7dd30e7b-b62e-4224-a563-9e9b68840732"
+Parent: "688fe2dd-705c-4fea-9ebc-1cb0b233536c"
+Template: "c6c01c70-5957-4a6e-8af1-0c28989a35da"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/galleries/Page Components/GalleryBanner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250913T130758Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "35ab8a33-72d2-439b-be54-1415b5445f94"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250913T130758Z

@@ -1,0 +1,57 @@
+﻿---
+ID: "8a3ef926-788d-4dea-a122-d4abed35c553"
+Parent: "3a0f334c-24af-4a50-8c0c-585141bc407b"
+Template: "3a5bab8a-e31f-4a16-84f2-3d8e6d9022d1"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/Page Components/TextEdgeImageBlock/TextEdgeImageData1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0024ac4c-3c40-42ed-94dd-6b7c96d38305"
+      Hint: btnLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{0A9E0ECC-A59B-469E-BF0E-EB92B413E561}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T173033Z
+    - ID: "4ed18b7c-e8c5-4bcb-aa22-c3ea98064022"
+      Hint: isRightImg
+      Value: 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "576bf659-d5ef-4df7-825a-12dde4776432"
+      Hint: description
+      Value: Step into the rhythms of traditional Emirati life through objects once used in homes, markets, and desert camps. Each piece offers a vivid glimpse into a way of life both humble and remarkable.
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "77c24c53-9ba7-4791-8017-626df7e24246"
+      Hint: lightBack
+      Value: 1
+    - ID: "83fffaf8-c3b8-4c39-8573-ae9f9f7c5981"
+      Hint: heading
+      Value: COLLECTION HIGHLIGHTS
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d8f8181e-d541-4304-bf41-63f85e422227"
+    - ID: "a01065fc-56a0-4a0c-953e-0857cc77d90e"
+      Hint: btnText
+      Value: Explore
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250915T094137Z
+    - ID: "da020081-d5ce-4b28-b010-b4f8852e3e58"
+      Hint: img
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{A8FF3A28-7F12-4FD6-954E-784DDF89509E}" />
+    - ID: "e8b9456d-c8bc-4c2c-a1db-e26380bef6bf"
+      Hint: subHeading
+      Value: Timeless Treasures Beneath the Sands

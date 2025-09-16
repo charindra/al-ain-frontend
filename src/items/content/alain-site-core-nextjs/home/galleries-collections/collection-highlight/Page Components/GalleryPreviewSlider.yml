@@ -1,0 +1,31 @@
+﻿---
+ID: "b57fc734-18c0-4291-ac32-fbc90a2060f2"
+Parent: "c1aefbde-aca6-41e3-beee-70dc841ff786"
+Template: "3eea7fd8-06e1-42e9-88e4-c38ccdee8562"
+Path: "/sitecore/content/alain-site-core-nextjs/home/galleries-collections/collection-highlight/Page Components/GalleryPreviewSlider"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250914T174431Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c9967e35-6c38-432f-a1da-baa7196f761a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250914T174431Z
