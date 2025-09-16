@@ -1,3 +1,4 @@
+import { getComponentList } from '@sitecore-jss/sitecore-jss-dev-tools';
 import { ComponentBuilderPlugin, ComponentBuilderPluginConfig } from '..';
 
 /**
@@ -21,7 +22,9 @@ class ComponentsPlugin implements ComponentBuilderPlugin {
      * const componentsPath = 'src/extra';
      * config.components = getComponentList(componentsPath);
      */
-    config.components = [];
+    const componentRoots = ['src/common/components', 'src/features'];
+
+    config.components = componentRoots.flatMap((root) => getComponentList(root));
 
     return config;
   }
