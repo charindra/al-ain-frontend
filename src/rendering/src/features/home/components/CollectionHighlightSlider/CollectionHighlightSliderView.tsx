@@ -1,4 +1,5 @@
 import { useTheme } from 'common/components/commonHooks/useTheme';
+import UnderlineHeading from 'common/components/UnderlineHeading';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,54 +7,12 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Autoplay, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import UnderlineHeading from '../../../../common/components/UnderlineHeading';
+import { COLLECTION_HIGHLIGHT_SLIDES } from './CollectionHighlightSlider.constants';
+import { CollectionHighlightSliderProps } from './CollectionHighlightSlider.types';
 
-const data = [
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-1.jpg',
-  },
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-2.jpg',
-  },
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-1.jpg',
-  },
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-2.jpg',
-  },
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-3.jpg',
-  },
-];
-
-// interface SlideItem {
-//   img: string;
-//   subHeading: string;
-//   heading: string;
-//   tag: string;
-// }
-
-// type CollectionHighlightSliderViewProps = {
-//   data: SlideItem[];
-// };
-
-// const CollectionHighlightSliderView = (props: CollectionHighlightSliderViewProps): JSX.Element => {
-const CollectionHighlightSliderView = (): JSX.Element => {
+const CollectionHighlightSliderView = ({
+  slides = COLLECTION_HIGHLIGHT_SLIDES,
+}: CollectionHighlightSliderProps): JSX.Element => {
   const { dir } = useTheme();
   return (
     <section className="bg-[#ECE0CA] py-[56px] lg:py-[72px] mt-4">
@@ -116,7 +75,7 @@ const CollectionHighlightSliderView = (): JSX.Element => {
         }}
         className="slider collection-slider change-direction"
       >
-        {data.map((slide, index) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <motion.div
               initial={{ opacity: 0, y: 40 }}

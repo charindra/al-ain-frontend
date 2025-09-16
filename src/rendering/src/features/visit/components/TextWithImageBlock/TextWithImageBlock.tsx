@@ -1,103 +1,35 @@
-import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
+'use client';
+
+import HeadingText from 'common/components/HeadingText';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeadingText from 'common/components/HeadingText';
+import { TEXT_WITH_IMAGE_ITEMS } from './TextWithImageBlock.constants';
+import { TextWithImageBlockResponse, TextWithImageItem } from './TextWithImageBlock.types';
 
-interface Item {
-  subHeading?: string;
-  heading: string;
-  description: string;
-  imgText?: string;
-  img: string;
-  btnText?: string;
-  btnLink?: string;
-  isRightImg?: boolean;
-  lightBack?: boolean;
-  bgColor?: string;
-}
+const TextWithImageBlock = ({ data }: TextWithImageBlockResponse): JSX.Element => {
+  const cmsItems = data?.datasource?.children?.results ?? [];
+  const mappedItems: TextWithImageItem[] = cmsItems.map((item) => ({
+    heading: item.heading?.value ?? '',
+    subHeading: item.subHeading?.value,
+    description: item.description?.value ?? '',
+    img: item.img?.value ?? '',
+    imgText: item.img?.value,
+    isRightImg: item.isRightImg?.value === '1',
+    lightBack: item.lightBack?.value === '1',
+    btnText: item.btnText?.value,
+    btnLink: item.btnLink?.value,
+  }));
 
-interface TextImageBlockItem {
-  id: string;
-  name: string;
-  heading?: Field<string>;
-  subHeading?: Field<string>;
-  description?: Field<string>;
-  img?: Field<string>;
-  isRightImg?: Field<string>;
-  lightBack?: Field<string>;
-  btnText?: Field<string>;
-  btnLink?: Field<string>;
-}
+  const items = mappedItems.length > 0 ? mappedItems : TEXT_WITH_IMAGE_ITEMS;
 
-interface TextImageBlockResponse {
-  data: {
-    datasource: {
-      children: {
-        results: TextImageBlockItem[];
-      };
-    };
-  };
-}
-
-const data: Item[] = [
-  {
-    heading: 'Visitor and Member Cloakroom',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Id tristique sed donec tellus. Platea in risus scelerisque congue.',
-    img: '/images/visit-page/VisitorCloackroom.png',
-    imgText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    isRightImg: true,
-    lightBack: true,
-  },
-  {
-    heading: 'Free Wi-Fi',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Id lacus scelerisque quis montes aliquet nullam ac praesent.',
-    img: '/images/visit-page/FreeWifi.jpg',
-    imgText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    isRightImg: false,
-    lightBack: true,
-  },
-  {
-    heading: 'Facilities for Children and Babies',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Bibendum sit donec a urna mauris. Venenatis feugiat ultricies diam elit neque consectetur.',
-    img: '/images/visit-page/ChildrendsandBabies.jpg',
-    imgText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    isRightImg: true,
-    lightBack: true,
-  },
-  {
-    heading: 'Parking',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Quis vel lobortis nec enim. Etiam viverra mauris sed consectetur.',
-    img: '/images/visit-page/Parking.png',
-    imgText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    isRightImg: false,
-    lightBack: true,
-  },
-  {
-    heading: 'Guided Tour',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Molestie tincidunt malesuada aliquam ac amet nibh turpis. Est elementum mauris lacus adipiscing elit.',
-    img: '/images/visit-page/GuidedTour.jpg',
-    imgText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    isRightImg: true,
-    lightBack: true,
-  },
-];
-
-const TextWIthImageBlock = (props: TextImageBlockResponse): JSX.Element => {
-  console.log('TextWIthImageBlock data', props);
   return (
     <div className="block mx-auto w-full lg:w-[83.1%] px-4 md:px-6 lg:px-0">
-      {data.map((item, i) => (
-        <div key={i}>
+      {items.map((item, index) => (
+        <div key={`${item.heading}-${index}`}>
           <div className="py-[56px] lg:py-[72px]">
             <div className={clsx('flex flex-wrap items-center lg:justify-between', item.bgColor)}>
-              {/* Text Side */}
               <div
                 className={clsx(
                   'max-w-[510px] md:w-[50.9%] px-4 md:px-6 lg:px-0',
@@ -107,11 +39,7 @@ const TextWIthImageBlock = (props: TextImageBlockResponse): JSX.Element => {
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 1,
-                    ease: 'easeOut',
-                    delay: 0,
-                  }}
+                  transition={{ duration: 1, ease: 'easeOut' }}
                   viewport={{ once: true, amount: 0.2 }}
                 >
                   <HeadingText
@@ -125,11 +53,7 @@ const TextWIthImageBlock = (props: TextImageBlockResponse): JSX.Element => {
                 <motion.p
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 1,
-                    ease: 'easeOut',
-                    delay: 0.3,
-                  }}
+                  transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
                   viewport={{ once: true, amount: 0.2 }}
                   className={clsx(
                     'text-[18px] leading-[28px] font-normal mb-8 lg:mb-6',
@@ -153,15 +77,10 @@ const TextWIthImageBlock = (props: TextImageBlockResponse): JSX.Element => {
                 )}
               </div>
 
-              {/* Image Side */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1,
-                  ease: 'easeOut',
-                  delay: 0.6,
-                }}
+                transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
                 viewport={{ once: true, amount: 0.2 }}
                 className={clsx(
                   'w-full md:w-[49.1%] px-4 md:px-0 mb-9 md:mb-0',
@@ -175,11 +94,13 @@ const TextWIthImageBlock = (props: TextImageBlockResponse): JSX.Element => {
                   height={501}
                   className="w-full object-cover h-[250px] md:h-[501px]"
                 />
-                <p className="text-[14px] text-gray-600 mt-[10px]">{item.imgText}</p>
+                {item.imgText && (
+                  <p className="text-[14px] text-gray-600 mt-[10px]">{item.imgText}</p>
+                )}
               </motion.div>
             </div>
           </div>
-          {i !== data.length - 1 && (
+          {index !== items.length - 1 && (
             <div className="flex justify-center">
               <div className="w-full h-px bg-[#D8D8D8]" />
             </div>
@@ -190,4 +111,4 @@ const TextWIthImageBlock = (props: TextImageBlockResponse): JSX.Element => {
   );
 };
 
-export default TextWIthImageBlock;
+export default TextWithImageBlock;

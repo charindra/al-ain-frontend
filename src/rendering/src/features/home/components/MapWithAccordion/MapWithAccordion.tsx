@@ -1,45 +1,13 @@
 'use client';
 
 import UnderlineHeading from 'common/components/UnderlineHeading';
+import Heading from 'common/components/HeadingText';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { motion } from 'framer-motion';
-import Heading from 'common/components/HeadingText';
+import { MAP_ACCORDION_ITEMS } from './MapWithAccordion.constants';
+import { MapWithAccordionProps } from './MapWithAccordion.types';
 
-const data = [
-  {
-    title: 'By Car',
-    description:
-      'Al Ain Museum showcases the rich heritage of the UAE through archaeological finds, traditional objects, and cultural exhibits. Visitors can explore galleries dedicated to daily life, ancient craftsmanship, and the legacy of the region’s communities.',
-  },
-  {
-    title: 'By Taxi',
-    description:
-      'Al Ain Museum showcases the rich heritage of the UAE through archaeological finds, traditional objects, and cultural exhibits. Visitors can explore galleries dedicated to daily life, ancient craftsmanship, and the legacy of the region’s communities.',
-  },
-  {
-    title: 'By Bus',
-    description:
-      'Al Ain Museum showcases the rich heritage of the UAE through archaeological finds, traditional objects, and cultural exhibits. Visitors can explore galleries dedicated to daily life, ancient craftsmanship, and the legacy of the region’s communities.',
-  },
-];
-
-// interface AccordionContent {
-//   title: string;
-//   description: string;
-// }
-
-// interface FaqHeading {
-//   topTitle: string;
-//   title: string;
-// }
-
-// type MapWithAccordionProps = {
-//   data: AccordionContent[];
-//   headingData: FaqHeading;
-// };
-
-// const MapWithAccordion = (props: MapWithAccordionProps): JSX.Element => {
-const MapWithAccordion = (): JSX.Element => {
+const MapWithAccordion = ({ items = MAP_ACCORDION_ITEMS }: MapWithAccordionProps): JSX.Element => {
   return (
     <section>
       <div className="block mx-auto w-full lg:w-[83.1%] px-4 md:px-6 lg:px-0 py-[56px] lg:py-[72px]">
@@ -70,12 +38,8 @@ const MapWithAccordion = (): JSX.Element => {
               </div>
               <div className="map-accordion mt-2 lg:mt-2">
                 <Accordion className="p-0" defaultExpandedKeys={['0']}>
-                  {data.map((item, index) => (
-                    <AccordionItem
-                      key={`${index.toString()}`}
-                      title={item.title}
-                      className="accordion-item"
-                    >
+                  {items.map((item) => (
+                    <AccordionItem key={item.title} title={item.title} className="accordion-item">
                       <p className="content">{item.description}</p>
                     </AccordionItem>
                   ))}

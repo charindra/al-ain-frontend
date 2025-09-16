@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextFetchEvent, NextRequest } from 'next/server';
 import { debug } from '@sitecore-jss/sitecore-jss-nextjs/middleware';
-import * as plugins from 'renderings/plugins/middleware-plugins';
+import * as plugins from 'src/temp/middleware-plugins';
 
 export interface MiddlewarePlugin {
   /**

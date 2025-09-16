@@ -1,3 +1,4 @@
+import UnderlineHeading from 'common/components/UnderlineHeading';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,56 +6,12 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Autoplay, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { useTheme } from '../../context/theme-context';
-import UnderlineHeading from '../../../../common/components/UnderlineHeading';
+import { COLLECTION_HIGHLIGHTS } from './CollectionHighlights.constants';
+import { CollectionHighlightsProps } from './CollectionHighlights.types';
 
-const data = [
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-1.jpg',
-  },
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-2.jpg',
-  },
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-1.jpg',
-  },
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-2.jpg',
-  },
-  {
-    subHeading: 'CA -1900 - CA -2300',
-    heading: 'Very long Artefact Name Spanning 2 Lines',
-    tag: 'Very Very Big Gallery Name',
-    img: '/images/collection-slide-3.jpg',
-  },
-];
-
-// interface SlideItem {
-//   img: string;
-//   subHeading: string;
-//   heading: string;
-//   tag: string;
-// }
-
-// type CollectionHighlightsProps = {
-//   data: SlideItem[];
-// };
-
-// const CollectionHighlights = (props: CollectionHighlightsProps): JSX.Element => {
-const CollectionHighlights = (): JSX.Element => {
-  // const { dir } = useTheme();
+const CollectionHighlights = ({
+  highlights = COLLECTION_HIGHLIGHTS,
+}: CollectionHighlightsProps): JSX.Element => {
   return (
     <section className="bg-[#ECE0CA] py-[56px] lg:py-[72px] mt-4">
       <div className="flex flex-wrap justify-between mx-auto w-full lg:w-[83.1%] px-4 md:px-6 lg:px-0 change-direction mb-4">
@@ -88,11 +45,6 @@ const CollectionHighlights = (): JSX.Element => {
         key={'ltr'}
         slidesPerView={3.6}
         spaceBetween={16}
-        //   autoplay={{
-        //     delay: 5000,
-        //     disableOnInteraction: false,
-        //   }}
-        //   speed={1500}
         scrollbar={{
           hide: true,
         }}
@@ -116,7 +68,7 @@ const CollectionHighlights = (): JSX.Element => {
         }}
         className="slider collection-slider change-direction"
       >
-        {data.map((slide, index) => (
+        {highlights.map((slide, index) => (
           <SwiperSlide key={index}>
             <motion.div
               initial={{ opacity: 0, y: 40 }}

@@ -1,44 +1,12 @@
 'use client';
 
 import { FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import HeadingText from 'common/components/HeadingText';
 import Link from 'next/link';
 import { useState } from 'react';
-import {
-  Control,
-  Controller,
-  FieldErrors,
-  FormState,
-  UseFormHandleSubmit,
-  UseFormRegister,
-  UseFormReset,
-} from 'react-hook-form';
-import HeadingText from 'common/components/HeadingText';
-
-interface FormValues {
-  firstName: string;
-  familyName: string;
-  email: string;
-  enquiry: string;
-  message: string;
-  privacy: boolean;
-}
-
-interface ContactFormProps {
-  onSubmit: (data: FormValues) => void;
-  register: UseFormRegister<FormValues>;
-  errors: FieldErrors<FormValues>;
-  handleSubmit: UseFormHandleSubmit<FormValues>;
-  formState: FormState<FormValues>;
-  reset: UseFormReset<FormValues>;
-  control: Control<FormValues>;
-}
-
-const enquiryOptions = [
-  { value: 'general', label: 'General Enquiry' },
-  { value: 'filming', label: 'Filming & Photography' },
-  { value: 'press', label: 'Press & Media' },
-  { value: 'venue', label: 'Venue Hiring' },
-];
+import { Controller } from 'react-hook-form';
+import { CONTACT_FORM_COPY, ENQUIRY_OPTIONS } from './ContactForm.constants';
+import { ContactFormProps } from './ContactForm.types';
 
 const ContactForm = ({
   onSubmit,
@@ -50,94 +18,64 @@ const ContactForm = ({
   control,
 }: ContactFormProps): JSX.Element => {
   const [submitted, setSubmitted] = useState(false);
-
   const { isValid } = formState;
+
   return (
     <div>
       <div className="w-full md:max-w-2xl bg-white/90 md:mb-[163px]">
         {!submitted ? (
           <form
-            onSubmit={handleSubmit((data) => {
-              onSubmit(data);
+            onSubmit={handleSubmit((formData) => {
+              onSubmit(formData);
               setSubmitted(true);
               reset();
             })}
             className="bg-white md:mx-auto p-8 break-normal shadow-md"
           >
-            {/* Title */}
-            <HeadingText heading="General Enquiry" className="text-[#1B1F27] mb-4" />
-
-            {/* Intro text */}
+            <HeadingText heading={CONTACT_FORM_COPY.heading} className="text-[#1B1F27] mb-4" />
             <p className="text-[#1B1F27] font-inter text-[18px] leading-[24px] font-[500] mb-8">
-              Please fill out the form to request additional information. <br />
-              We will review your enquiry and get back to you as soon as possible.
+              {CONTACT_FORM_COPY.intro}
             </p>
 
-            {/* First name & Family name */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <TextField
-                  type="text"
-                  {...register('firstName', {
-                    required: 'First name is required',
-                    pattern: {
-                      value: /^[A-Za-z\s]+$/,
-                      message: 'First name cannot contain numbers or special characters',
-                    },
-                  })}
-                  label="First name*"
-                  variant="standard"
-                  fullWidth
-                  error={!!errors.firstName}
-                  helperText={errors.firstName ? errors.firstName.message : ''}
-                  slotProps={{
-                    inputLabel:
-                      document?.dir === 'rtl'
-                        ? { sx: { textAlign: 'right', right: 0, left: 'auto', direction: 'rtl' } }
-                        : {},
-                    input:
-                      document?.dir === 'rtl'
-                        ? { style: { textAlign: 'right', direction: 'rtl' } }
-                        : {},
-                  }}
-                />
-              </div>
+              <TextField
+                type="text"
+                {...register('firstName', {
+                  required: 'First name is required',
+                  pattern: {
+                    value: /^[A-Za-z\s]+$/,
+                    message: 'First name cannot contain numbers or special characters',
+                  },
+                })}
+                label="First name*"
+                variant="standard"
+                fullWidth
+                error={!!errors.firstName}
+                helperText={errors.firstName ? errors.firstName.message : ''}
+              />
 
-              <div>
-                <TextField
-                  type="text"
-                  {...register('familyName', {
-                    required: 'Family name is required',
-                    pattern: {
-                      value: /^[A-Za-z\s]+$/,
-                      message: 'Family name cannot contain numbers or special characters',
-                    },
-                  })}
-                  label="Family Name*"
-                  variant="standard"
-                  fullWidth
-                  error={!!errors.familyName}
-                  helperText={errors.familyName ? errors.familyName.message : ''}
-                  slotProps={{
-                    inputLabel:
-                      document?.dir === 'rtl'
-                        ? { sx: { textAlign: 'right', right: 0, left: 'auto', direction: 'rtl' } }
-                        : {},
-                    input:
-                      document?.dir === 'rtl'
-                        ? { style: { textAlign: 'right', direction: 'rtl' } }
-                        : {},
-                  }}
-                />
-              </div>
+              <TextField
+                type="text"
+                {...register('familyName', {
+                  required: 'Family name is required',
+                  pattern: {
+                    value: /^[A-Za-z\s]+$/,
+                    message: 'Family name cannot contain numbers or special characters',
+                  },
+                })}
+                label="Family Name*"
+                variant="standard"
+                fullWidth
+                error={!!errors.familyName}
+                helperText={errors.familyName ? errors.familyName.message : ''}
+              />
             </div>
 
-            {/* Email */}
             <div className="mb-6">
               <TextField
                 type="email"
                 {...register('email', {
-                  required: 'email is required',
+                  required: 'Email is required',
                   pattern: {
                     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                     message: 'Please enter a valid email',
@@ -148,179 +86,91 @@ const ContactForm = ({
                 fullWidth
                 error={!!errors.email}
                 helperText={errors.email ? errors.email.message : ''}
-                slotProps={{
-                  inputLabel:
-                    document?.dir === 'rtl'
-                      ? { sx: { textAlign: 'right', right: 0, left: 'auto', direction: 'rtl' } }
-                      : {},
-                  input:
-                    document?.dir === 'rtl'
-                      ? { style: { textAlign: 'right', direction: 'rtl' } }
-                      : {},
-                }}
               />
             </div>
 
-            {/* Enquiry */}
             <div className="mb-6">
               <Controller
                 name="enquiry"
                 control={control}
                 rules={{ required: 'Please select an enquiry type' }}
-                render={({ field }) => (
-                  <FormControl
-                    sx={{
-                      borderBottom: '1px solid #8D8F94',
-                      '& .MuiInputBase-root:before': {
-                        borderBottom: 'none',
-                      },
-                      '& .MuiInputBase-root:after': {
-                        borderBottom: '1px solid black',
-                      },
-                    }}
-                    variant="standard"
-                    fullWidth
-                    error={!!errors.enquiry}
-                  >
-                    <InputLabel
-                      id="enquiry-label"
-                      sx={
-                        document?.dir === 'rtl'
-                          ? { textAlign: 'right', right: 0, left: 'auto', direction: 'rtl' }
-                          : {}
-                      }
-                    >
-                      What&apos;s your enquiry about?*
-                    </InputLabel>
-
+                render={({ field, fieldState }) => (
+                  <FormControl variant="standard" fullWidth error={!!fieldState.error}>
+                    <InputLabel id="enquiry-label">What&apos;s your enquiry about?*</InputLabel>
                     <Select
                       {...field}
                       labelId="enquiry-label"
                       id="enquiry"
                       value={field.value || ''}
-                      sx={{
-                        ...(document?.dir === 'rtl'
-                          ? {
-                              textAlign: 'right',
-                              direction: 'rtl',
-                              '& .MuiSelect-icon': {
-                                right: 'auto', // remove default right
-                                left: 0, // push to left
-                              },
-                            }
-                          : {
-                              '& .MuiSelect-icon': {
-                                right: 0, // normal (English)
-                                left: 'auto',
-                              },
-                            }),
-                      }}
                     >
-                      {enquiryOptions.map((option) => (
+                      <MenuItem value="">Select enquiry type</MenuItem>
+                      {ENQUIRY_OPTIONS.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
                           {option.label}
                         </MenuItem>
                       ))}
                     </Select>
-
-                    {errors.enquiry && (
-                      <p className="text-red-500 text-xs mt-1">{errors.enquiry.message}</p>
+                    {fieldState.error && (
+                      <p className="mt-1 text-xs text-red-500">{fieldState.error.message}</p>
                     )}
                   </FormControl>
                 )}
               />
             </div>
 
-            {/* Message */}
             <div className="mb-6">
               <TextField
-                {...register('message', { required: true })}
-                label="Write your message here"
+                {...register('message', {
+                  required: 'Please enter your message',
+                  minLength: {
+                    value: 10,
+                    message: 'Please enter a message with at least 10 characters',
+                  },
+                })}
+                label="Your message*"
+                variant="standard"
+                fullWidth
                 multiline
                 rows={4}
-                variant="outlined" // keep border box for message
-                fullWidth
                 error={!!errors.message}
-                helperText={errors.message ? 'Message is required' : ''}
-                slotProps={{
-                  inputLabel:
-                    document?.dir === 'rtl'
-                      ? {
-                          sx: {
-                            textAlign: 'right',
-                            right: 20, // offset for outlined variant
-                            left: 'auto',
-                            transformOrigin: 'top right', // fixes floating animation
-                            direction: 'rtl',
-                          },
-                        }
-                      : {},
-                  input:
-                    document?.dir === 'rtl'
-                      ? { style: { textAlign: 'right', direction: 'rtl' } }
-                      : {},
-                }}
+                helperText={errors.message ? errors.message.message : ''}
               />
             </div>
 
-            {/* Privacy */}
-            <div className="flex items-start mb-6">
+            <div className="flex items-start gap-3 mb-6">
               <input
                 type="checkbox"
-                {...register('privacy', { required: true })}
-                className="mt-1 me-3 h-6 w-6 border border-gray-400 accent-black"
+                id="contact-privacy"
+                {...register('privacy', {
+                  required: 'Please acknowledge our privacy policy',
+                })}
+                className="mt-[6px] w-[18px] h-[18px] border border-[#8D8F94]"
               />
-              <span className="font-inter text-[16px] leading-[20px] font-[400] text-[#1B1F27]">
-                All information provided will be handled in accordance with our{' '}
-                <Link
-                  href="/privacy-notice"
-                  className="font-inter text-[16px] leading-[20px] font-[400] text-[#1B1F27] underline underline-offset-2"
-                >
-                  Privacy Notice
+              <label
+                htmlFor="contact-privacy"
+                className="text-[16px] leading-[24px] text-[#1B1F27]"
+              >
+                I have read and agree with the{' '}
+                <Link href="/privacy-policy" className="underline">
+                  privacy policy.
                 </Link>
-                .
-              </span>
+              </label>
             </div>
-            {errors.privacy && (
-              <p className="text-red-500 text-xs mb-4">You must accept the Privacy Notice</p>
-            )}
 
-            {/* Submit button */}
             <button
               type="submit"
               disabled={!isValid}
-              className={`flex justify-center items-center gap-2 w-full md:w-[150px] px-[24px] py-[14px]
-    ${
-      isValid
-        ? 'bg-black text-white cursor-pointer hover:bg-gray-800'
-        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-    }
-    font-inter text-[16px] font-[700] transition`}
+              className="page-btn grad-btn-bg w-full md:w-auto disabled:opacity-50"
             >
               Submit
             </button>
           </form>
         ) : (
-          // Success Message
-          <div className="bg-white p-8 shadow-md">
-            <h2 className='text-[#1B1F27] font-["Big Caslon"] text-[32px] leading-[40px] font-[500] mb-4'>
-              General Enquiry
-            </h2>
-            <div className="bg-gray-50 border border-gray-200 p-6 rounded-md relative">
-              <button
-                onClick={() => setSubmitted(false)}
-                className="absolute top-3 right-3 text-gray-600 hover:text-black"
-              >
-                ✕
-              </button>
-              <p className="text-[#1B1F27] font-inter text-[20px] leading-[28px] font-[400] mb-2">
-                We&apos;ve received your message, <br />
-                thanks for reaching out.
-              </p>
-              <p className="text-[#1B1F27] font-inter text-[20px] leading-[28px] font-[400]">
-                Someone from our team will get back to you shortly.
-              </p>
-            </div>
+          <div className="p-8 bg-white shadow-md">
+            <HeadingText heading="Thank You" className="text-[#1B1F27] mb-4" />
+            <p className="text-[#1B1F27]">
+              We have received your enquiry and will get back to you shortly.
+            </p>
           </div>
         )}
       </div>

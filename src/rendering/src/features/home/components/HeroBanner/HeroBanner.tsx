@@ -1,29 +1,13 @@
-import { Field, Text } from '@sitecore-jss/sitecore-jss-nextjs';
-import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
-import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-type HeroBannerProps = {
-  fields: {
-    data: {
-      datasource: {
-        heading: Field<string>;
-        subHeading: Field<string>;
-        heroImages: {
-          targetItems: {
-            url: {
-              url: string;
-            };
-          }[];
-        };
-      };
-    };
-  };
-};
+import Image from 'next/image';
+import { Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { heroBannerStyles } from './HeroBanner.styles';
+import { HeroBannerProps } from './HeroBanner.types';
 
 const HeroBanner = (props: HeroBannerProps): JSX.Element => {
   const data = props?.fields?.data?.datasource;
@@ -44,15 +28,6 @@ const HeroBanner = (props: HeroBannerProps): JSX.Element => {
             disableOnInteraction: false,
           }}
           speed={1500}
-          // creativeEffect={{
-          //   prev: {
-          //     shadow: false,
-          //     translate: ['-20%', 0, -1],
-          //   },
-          //   next: {
-          //     translate: ['100%', 0, 0],
-          //   },
-          // }}
           loop
           modules={[Autoplay, EffectFade, Pagination]}
           className="slider change-direction h-[calc(100vh-106px)] lg:h-[calc(100vh-135px)]"
@@ -72,7 +47,6 @@ const HeroBanner = (props: HeroBannerProps): JSX.Element => {
           ))}
         </Swiper>
 
-        {/* Overlay Content */}
         <div className="absolute bottom-16 ltr:left-0 rtl:right-0 home-banner-overlay change-direction">
           <div className="block mx-auto w-full lg:w-[83.1%] px-4 md:px-6 lg:px-0">
             <div className="mb-4 z-[1] relative">
@@ -81,7 +55,7 @@ const HeroBanner = (props: HeroBannerProps): JSX.Element => {
                 className="text-[18px] leading-[24px] font-bold uppercase change-direction text-white"
                 field={data?.subHeading}
               />
-              <span className={`h-[3px] w-[66px] block mt-2 bg-white`} />
+              <span className="h-[3px] w-[66px] block mt-2 bg-white" />
             </div>
 
             <Text
@@ -94,29 +68,9 @@ const HeroBanner = (props: HeroBannerProps): JSX.Element => {
           </div>
         </div>
 
-        <style jsx>{`
-          .custom-pagination {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 16px;
-          }
-          .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.5);
-            opacity: 1;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-          }
-          .swiper-pagination-bullet-active {
-            background: #ffffff;
-            width: 16px;
-            height: 16px;
-          }
-        `}</style>
+        <style jsx global>
+          {heroBannerStyles}
+        </style>
       </div>
     </div>
   );

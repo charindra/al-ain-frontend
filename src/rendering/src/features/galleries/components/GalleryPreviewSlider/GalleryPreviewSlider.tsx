@@ -123,7 +123,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
         }
       }
     }
-  }, [searchParams, pageData]);
+  }, [searchParams]);
 
   // Initialize galleryID from URL parameter if not provided as prop
   //   useEffect(() => {
@@ -151,7 +151,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
         mainSwiperRef.current.slideTo(slideIndex);
       }
     }
-  }, [searchParams, pageData, swiperReady]);
+  }, [searchParams, swiperReady]);
 
   const updateURL = (slideIndex: number) => {
     const params = new URLSearchParams(searchParams.toString());
