@@ -1,7 +1,7 @@
 // import { useI18n } from 'next-localization';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
-// import config from 'temp/config';
+// import config from 'renderings/config';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore editors.
 // If you're not supporting Sitecore editors, you can remove this.

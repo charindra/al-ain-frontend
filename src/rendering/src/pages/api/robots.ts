@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { GraphQLRobotsService } from '@sitecore-jss/sitecore-jss-nextjs';
-import { siteResolver } from 'lib/site-resolver';
-import clientFactory from 'lib/graphql-client-factory';
+import { siteResolver } from 'services/sitecore/site-resolver';
+import clientFactory from 'services/sitecore/graphql-client';
 
 const robotsApi = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   res.setHeader('Content-Type', 'text/plain');

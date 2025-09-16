@@ -1,5 +1,5 @@
 import type { NextRequest, NextFetchEvent } from 'next/server';
-import middleware from 'lib/middleware';
+import middleware from 'services/sitecore/middleware';
 
 // eslint-disable-next-line
 export default async function (req: NextRequest, ev: NextFetchEvent) {

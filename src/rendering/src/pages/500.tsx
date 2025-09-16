@@ -4,13 +4,13 @@ import {
   SitecoreContext,
   ErrorPages,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { SitecorePageProps } from 'lib/page-props';
+import { SitecorePageProps } from 'services/sitecore/page-props';
 import Layout from 'src/Layout';
-import { componentBuilder } from 'temp/componentBuilder';
+import { componentBuilder } from 'renderings/componentFactory';
 import { GetStaticProps } from 'next';
-import config from 'temp/config';
-import { siteResolver } from 'lib/site-resolver';
-import clientFactory from 'lib/graphql-client-factory';
+import config from 'renderings/config';
+import { siteResolver } from 'services/sitecore/site-resolver';
+import clientFactory from 'services/sitecore/graphql-client';
 
 /**
  * Rendered in case if we have 500 error

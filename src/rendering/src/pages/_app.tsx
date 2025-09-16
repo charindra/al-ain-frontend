@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import Router from 'next/router';
 import { I18nProvider } from 'next-localization';
 import NProgress from 'nprogress';
-import { SitecorePageProps } from 'lib/page-props';
+import { SitecorePageProps } from 'services/sitecore/page-props';
 //import Bootstrap from 'src/Bootstrap';
 import '../styles/global.css';
 import '../styles/scss/components/accordion.scss';

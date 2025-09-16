@@ -1,5 +1,5 @@
 /* eslint-disable  @typescript-eslint/no-unused-vars */
-import { SitecorePageProps } from 'lib/page-props';
+import { SitecorePageProps } from 'services/sitecore/page-props';
 
 /**
  * The Bootstrap component is the entry point for performing any initialization logic

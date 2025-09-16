@@ -4,9 +4,9 @@ import NotFound from 'src/NotFound';
 import Layout from 'src/Layout';
 import { SitecoreContext, ComponentPropsContext } from '@sitecore-jss/sitecore-jss-nextjs';
 import { handleEditorFastRefresh } from '@sitecore-jss/sitecore-jss-nextjs/utils';
-import { SitecorePageProps } from 'lib/page-props';
-import { sitecorePagePropsFactory } from 'lib/page-props-factory';
-import { componentBuilder } from 'temp/componentBuilder';
+import { SitecorePageProps } from 'services/sitecore/page-props';
+import { sitecorePagePropsFactory } from 'services/sitecore/page-props-factory';
+import { componentBuilder } from 'renderings/componentFactory';
 
 const SitecorePage = ({
   notFound,

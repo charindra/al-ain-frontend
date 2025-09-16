@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { NativeDataFetcher, GraphQLSitemapXmlService } from '@sitecore-jss/sitecore-jss-nextjs';
-import { siteResolver } from 'lib/site-resolver';
-import clientFactory from 'lib/graphql-client-factory';
+import { siteResolver } from 'services/sitecore/site-resolver';
+import clientFactory from 'services/sitecore/graphql-client';
 
 const sitemapApi = async (
   req: NextApiRequest,

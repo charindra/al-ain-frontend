@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import { Field, HTMLLink, LayoutServiceData, Placeholder } from '@sitecore-jss/sitecore-jss-nextjs';
-import MetaData from 'components/non-sitecore/meta-data/MetaData';
+import MetaData from 'common/components/Meta/meta-data/MetaData';
 import Head from 'next/head';
 import Scripts from 'src/Scripts';
-import config from 'temp/config';
+import config from 'renderings/config';
 //import { HeroBanner } from './components/features/Banners/HeroBanner';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore editors.
