@@ -38,6 +38,9 @@
       "common/*": [
         "src/common/*"
       ],
+      "theMuseum/*": [
+        "src/features/theMuseum/*"
+      ],
       "features/*": [
         "src/features/*"
       ],

@@ -1,31 +1,20 @@
-import { Field, Link, LinkField, RichText, Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Link, RichText, Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import { motion } from 'framer-motion';
-import { ComponentProps } from 'services/sitecore/component-props';
 import Image from 'next/image';
+import { GALLERY_TEXT_BUTTON_FALLBACK } from './GalleryTextContent.constants';
+import { GalleryTextContentProps } from './GalleryTextContent.types';
 
-type GalleryTextContentProps = ComponentProps & {
-  fields: {
-    topHeading: Field<string>;
-    heading?: Field<string>;
-    description?: Field<string>;
-    btnLink?: LinkField;
-    btnText?: Field<string>;
-  };
-};
+const GalleryTextContent = ({ fields }: GalleryTextContentProps): JSX.Element => {
+  const buttonText =
+    fields?.btnText?.value || fields?.btnLink?.value?.text || GALLERY_TEXT_BUTTON_FALLBACK;
 
-const GalleryTextContent = (props: GalleryTextContentProps): JSX.Element => {
-  const { fields } = props;
-  console.log('galery ', props);
   return (
     <div className="block mx-auto w-full lg:w-[83.1%] px-4 md:px-6 lg:px-0 mb-8 mt-[56px] lg:mt-[72px] lg:mb-[72px] change-direction">
       <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            ease: 'easeOut',
-          }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.2 }}
         >
           <Text
@@ -42,11 +31,7 @@ const GalleryTextContent = (props: GalleryTextContentProps): JSX.Element => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: 'easeOut',
-              delay: 0.6,
-            }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
             viewport={{ once: true, amount: 0.2 }}
           >
             <Text
@@ -61,11 +46,7 @@ const GalleryTextContent = (props: GalleryTextContentProps): JSX.Element => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: 'easeOut',
-              delay: 0.8,
-            }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.8 }}
             viewport={{ once: true, amount: 0.2 }}
           >
             <RichText
@@ -79,7 +60,7 @@ const GalleryTextContent = (props: GalleryTextContentProps): JSX.Element => {
                 field={fields.btnLink}
                 className="page-btn outline-black-btn min-w-full md:min-w-[150px] flex items-center justify-center gap-2"
               >
-                {fields.btnText?.value || fields.btnLink?.value?.text || 'Explo'}
+                {buttonText}
                 <Image src="/images/right-arrow.svg" alt="arrow" width={24} height={24} />
               </Link>
             )}

@@ -9,6 +9,11 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import {
+  GALLERY_PREVIEW_SLIDES,
+  GALLERY_PREVIEW_THUMBNAILS,
+} from './GalleryPreviewSlider.constants';
+import type { GalleryPreviewSliderProps } from './GalleryPreviewSlider.types';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -33,71 +38,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 //   galleryID?: string;
 // };
 
-const pageData = [
-  {
-    topHeading: 'GALLERY NAME',
-    heading: 'Artefact Name',
-    subHeading: 'ca -2300 to ca -1900',
-    origin: 'Lorem ipsum dolor sit amet, Lorem ipsum',
-    material: 'Lorem ipsum dolor sit amet',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-    img: '/images/gallery-img-1.png',
-    galleryID: 'Artefact Name',
-  },
-  {
-    topHeading: 'ROYAL TREASURES',
-    heading: 'Gold Necklace of Queen Puabi',
-    subHeading: 'ca -2600 BCE',
-    origin: 'Royal Cemetery of Ur, Mesopotamia',
-    material: 'Gold, lapis lazuli, and carnelian beads',
-    description:
-      'Discovered in the tomb of Queen Puabi, this exquisite gold necklace represents the pinnacle of Sumerian jewelry craftsmanship. The intricate design features alternating gold and semi-precious stone beads, showcasing the advanced metallurgical skills of ancient artisans.',
-    img: '/images/gal1.jpg',
-    galleryID: 'Gold Necklace of Queen Puabi',
-  },
-  {
-    topHeading: 'RELIGIOUS ICONS',
-    heading: 'Ziggurat Model',
-    subHeading: 'ca -2000 BCE',
-    origin: 'Southern Mesopotamia',
-    material: 'Terracotta with painted decoration',
-    description:
-      'This miniature model of a ziggurat temple represents the architectural marvels of ancient Mesopotamia. Ziggurats were massive stepped pyramids that served as temples and were believed to be dwelling places for the gods.',
-    img: '/images/gallery-img-1.png',
-    galleryID: 'Ziggurat Model',
-  },
-  {
-    topHeading: 'DAILY LIFE',
-    heading: "Potter's Wheel Fragment",
-    subHeading: 'ca -3000 BCE',
-    origin: 'Ancient workshop site, Mesopotamia',
-    material: 'Terracotta with wear patterns',
-    description:
-      "This fragment from an ancient potter's wheel demonstrates the technological advancements in ceramic production during the Neolithic period. The wheel revolutionized pottery making, allowing for more efficient and consistent production.",
-    img: '/images/gallery-img-1.png',
-    galleryID: "Potter's Wheel Fragment",
-  },
-];
-
-const slideData = [
-  {
-    img: '/images/gallery-img-1.png',
-  },
-  {
-    img: '/images/gal1.jpg',
-  },
-  {
-    img: '/images/gallery-img-1.png',
-  },
-  {
-    img: '/images/gallery-img-1.png',
-  },
-];
-
-// const GalleryPreviewSlider = (props: GalleryPreviewSliderProps): JSX.Element => {
-
-const GalleryPreviewSlider = (): JSX.Element => {
+const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Element => {
+  const { slides = GALLERY_PREVIEW_SLIDES, thumbnails = GALLERY_PREVIEW_THUMBNAILS } = props;
   const router = useRouter();
   const searchParams = useSearchParams();
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -112,18 +54,18 @@ const GalleryPreviewSlider = (): JSX.Element => {
     if (slideParam) {
       // Convert underscores back to spaces for matching
       const normalizedSlideParam = slideParam.replace(/_/g, ' ');
-      const slideIndex = pageData.findIndex((item) => item.galleryID === normalizedSlideParam);
+      const slideIndex = slides.findIndex((item) => item.galleryID === normalizedSlideParam);
       if (slideIndex !== -1) {
         setActiveSlide(slideIndex);
       } else {
         // Fallback to numeric index for backward compatibility
         const numericIndex = parseInt(slideParam, 10);
-        if (!isNaN(numericIndex) && numericIndex >= 0 && numericIndex < pageData.length) {
+        if (!isNaN(numericIndex) && numericIndex >= 0 && numericIndex < slides.length) {
           setActiveSlide(numericIndex);
         }
       }
     }
-  }, [searchParams]);
+  }, [searchParams, slides]);
 
   // Initialize galleryID from URL parameter if not provided as prop
   //   useEffect(() => {
@@ -140,24 +82,24 @@ const GalleryPreviewSlider = (): JSX.Element => {
     if (slideParam && swiperReady && mainSwiperRef.current) {
       // Convert underscores back to spaces for matching
       const normalizedSlideParam = slideParam.replace(/_/g, ' ');
-      let slideIndex = pageData.findIndex((item) => item.galleryID === normalizedSlideParam);
+      let slideIndex = slides.findIndex((item) => item.galleryID === normalizedSlideParam);
 
       if (slideIndex === -1) {
         // Fallback to numeric index for backward compatibility
         slideIndex = parseInt(slideParam, 10);
       }
 
-      if (slideIndex !== -1 && slideIndex >= 0 && slideIndex < pageData.length) {
+      if (slideIndex !== -1 && slideIndex >= 0 && slideIndex < slides.length) {
         mainSwiperRef.current.slideTo(slideIndex);
       }
     }
-  }, [searchParams, swiperReady]);
+  }, [searchParams, swiperReady, slides]);
 
   const updateURL = (slideIndex: number) => {
     const params = new URLSearchParams(searchParams.toString());
 
     // Use galleryID if available, otherwise fallback to numeric index
-    const currentSlide = pageData[slideIndex];
+    const currentSlide = slides[slideIndex];
     if (currentSlide?.galleryID) {
       // Convert spaces to underscores for URL
       const urlSafeGalleryID = currentSlide.galleryID.replace(/ /g, '_');
@@ -213,7 +155,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
                         isFading ? 'opacity-0' : 'opacity-100'
                       }`}
                     >
-                      {pageData[activeSlide]?.topHeading}
+                      {slides[activeSlide]?.topHeading}
                     </p>
                   </motion.div>
 
@@ -232,7 +174,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
                         isFading ? 'opacity-0' : 'opacity-100'
                       }`}
                     >
-                      {pageData[activeSlide]?.heading}
+                      {slides[activeSlide]?.heading}
                     </h2>
                   </motion.div>
 
@@ -251,7 +193,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
                         isFading ? 'opacity-0' : 'opacity-100'
                       }`}
                     >
-                      {pageData[activeSlide]?.subHeading}
+                      {slides[activeSlide]?.subHeading}
                     </p>
                   </motion.div>
                 </div>
@@ -311,7 +253,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
                     isFading ? 'opacity-0' : 'opacity-100'
                   }`}
                 >
-                  {pageData[activeSlide]?.origin}
+                  {slides[activeSlide]?.origin}
                 </p>
               </motion.div>
             </div>
@@ -332,7 +274,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
                     isFading ? 'opacity-0' : 'opacity-100'
                   }`}
                 >
-                  {pageData[activeSlide]?.material}
+                  {slides[activeSlide]?.material}
                 </p>
               </motion.div>
             </div>
@@ -355,7 +297,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
                     isFading ? 'opacity-0' : 'opacity-100'
                   }`}
                 >
-                  {pageData[activeSlide]?.description}
+                  {slides[activeSlide]?.description}
                 </p>
               </motion.div>
             </div>
@@ -402,7 +344,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
               }}
               onSlideChange={handleSlideChange}
             >
-              {pageData.map((item, index1) => (
+              {slides.map((item, index1) => (
                 <SwiperSlide key={index1}>
                   <div className="h-[659px]">
                     <motion.div
@@ -443,7 +385,7 @@ const GalleryPreviewSlider = (): JSX.Element => {
                   },
                 }}
               >
-                {slideData.map((item, index2) => (
+                {thumbnails.map((item, index2) => (
                   <SwiperSlide key={index2}>
                     <div
                       className="cursor-pointer transition-all duration-300"

@@ -3,24 +3,11 @@ import {
   NextImage as JssImage,
   Link as JssLink,
   RichText as JssRichText,
-  ImageField,
-  Field,
-  LinkField,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
-interface Fields {
-  PromoIcon: ImageField;
-  PromoText: Field<string>;
-  PromoLink: LinkField;
-  PromoText2: Field<string>;
-}
+import type { PromoComponentProps } from './Promo.types';
 
-type PromoProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-const PromoDefaultComponent = (props: PromoProps): JSX.Element => (
+const PromoDefaultComponent = (props: PromoComponentProps): JSX.Element => (
   <div className={`component promo ${props?.params?.styles}`}>
     <div className="component-content">
       <span className="is-empty-hint">Promo</span>
@@ -28,7 +15,7 @@ const PromoDefaultComponent = (props: PromoProps): JSX.Element => (
   </div>
 );
 
-export const Default = (props: PromoProps): JSX.Element => {
+export const Default = (props: PromoComponentProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   if (props.fields) {
     return (
@@ -55,7 +42,7 @@ export const Default = (props: PromoProps): JSX.Element => {
   return <PromoDefaultComponent {...props} />;
 };
 
-export const WithText = (props: PromoProps): JSX.Element => {
+export const WithText = (props: PromoComponentProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   if (props.fields) {
     return (
@@ -71,7 +58,7 @@ export const WithText = (props: PromoProps): JSX.Element => {
               </div>
             </div>
             <div className="field-promotext">
-              <JssRichText className="promo-text" field={props.fields.PromoText2} />
+              <JssRichText className="promo-text" field={props.fields?.PromoText2} />
             </div>
           </div>
         </div>

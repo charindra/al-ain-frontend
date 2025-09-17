@@ -1,67 +1,7 @@
 import { Text, Link, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
-import { ComponentProps } from 'services/sitecore/component-props';
 import NextLink from 'next/link';
 
-type DataSource = {
-  sample1: {
-    jsonValue: {
-      value: string;
-    };
-    value: string;
-  };
-  sample2: {
-    definition: {
-      type: string;
-      shared: boolean;
-    };
-    jsonValue: {
-      value: {
-        href: string;
-        linktype: string;
-        target: string;
-        text: string;
-        url: string;
-      };
-    };
-    target: string;
-    text: string;
-    url: string;
-  };
-  name: string;
-  id: string;
-};
-
-type Item = {
-  id: string;
-  url: {
-    path: string;
-  };
-  pageTitle: {
-    value: string;
-    jsonValue: {
-      value: string;
-    };
-  };
-};
-
-type ItemSearchResults = {
-  results: Item[];
-};
-
-type GraphQlIntegratedDemoProps = ComponentProps & {
-  fields: {
-    data: {
-      datasource: DataSource;
-      contextItem: {
-        id: string;
-        children: ItemSearchResults;
-        pageTitle: {
-          value: string;
-        };
-      };
-    };
-  };
-};
+import type { GraphQlIntegratedDemoProps } from './GraphQL-IntegratedDemo.types';
 
 const GraphQLIntegratedDemo = (props: GraphQlIntegratedDemoProps): JSX.Element => {
   // Query results in integrated GraphQL replace the normal `fields` data
@@ -112,7 +52,7 @@ const GraphQLIntegratedDemo = (props: GraphQlIntegratedDemoProps): JSX.Element =
           <br />
           children:
           <ul>
-            {contextItem.children.results.map((child: Item) => (
+            {contextItem.children.results.map((child) => (
               <li key={child.id}>
                 <NextLink href={child.url.path}>{child.pageTitle.value}</NextLink>
                 &nbsp; (editable title too! <Text field={child.pageTitle.jsonValue} />)

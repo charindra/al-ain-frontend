@@ -1,28 +1,19 @@
 import React from 'react';
-import { Field, RichText as JssRichText } from '@sitecore-jss/sitecore-jss-nextjs';
+import { RichText as JssRichText } from '@sitecore-jss/sitecore-jss-nextjs';
 
-interface Fields {
-  Text: Field<string>;
-}
+import type { SharedRichTextProps } from './RichText.types';
 
-export type RichTextProps = {
-  params: { [key: string]: string };
-  fields: Fields;
-};
-
-export const Default = (props: RichTextProps): JSX.Element => {
+export const Default = (props: SharedRichTextProps): JSX.Element => {
   const text = props.fields ? (
     <JssRichText field={props.fields.Text} />
   ) : (
     <span className="is-empty-hint">Rich text</span>
   );
   const id = props.params.RenderingIdentifier;
+  const styles = props.params.styles?.trimEnd?.() ?? '';
 
   return (
-    <div
-      className={`component rich-text ${props?.params?.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component rich-text ${styles}`.trim()} id={id ? id : undefined}>
       <div className="component-content">{text}</div>
     </div>
   );
