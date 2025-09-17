@@ -1,5 +1,5 @@
-import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'services/sitecore/component-props';
+import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
 
 export type ReadyExploreFields = {
   heading: Field<string>;
