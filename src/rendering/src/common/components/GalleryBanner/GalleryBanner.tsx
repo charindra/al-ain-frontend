@@ -1,4 +1,4 @@
-import { Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GalleryBannerProps } from './GalleryBanner.types';

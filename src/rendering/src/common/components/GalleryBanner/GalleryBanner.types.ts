@@ -9,7 +9,13 @@ export type MenuItem = {
 export type GalleryChild = {
   id: string;
   name: string;
-  link: LinkField;
+  link: {
+    jsonValue?: {
+      value?: {
+        href?: string;
+      };
+    };
+  };
 };
 
 export type GalleryBannerData = {

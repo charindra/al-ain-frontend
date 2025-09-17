@@ -8,12 +8,12 @@ import {
 import clsx from 'clsx';
 import getTopNavigationQuery from './topNavigation.query';
 import { GraphQLClient } from 'services/sitecore/graphql-client/graphql-client';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { NavigationFolder, NavigationItem, TopNavigationProps } from './TopNavigation.types';
 import { normalizeMenuItems } from './TopNavigation.utils';
+import PrefixedImage from 'features/shared/components/PrefixedImage';
 
 const TopNavigation = (props: TopNavigationProps): JSX.Element => {
   const context = useSitecoreContext();
@@ -54,7 +54,7 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
 
   return (
     <header
-      className={`w-full border-b border-gray-200 fixed top-0 left-0 z-50 bg-white shadow-md transition-all duration-300 ${
+      className={`w-full border-b border-gray-200 fixed left-0 z-50 bg-white shadow-md transition-all duration-300 ${
         scrolled ? 'h-[70px] lg:h-[73px]' : 'h-[99px] lg:h-[135px]'
       }`}
     >
@@ -66,11 +66,11 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
         {/* ---------- Mobile View ---------- */}
         <div className="flex w-full items-center justify-between lg:hidden ml-[16px] mr-[16px]">
           <button onClick={() => setMenuOpen(true)} className="cursor-pointer">
-            <Image src="/images/Menu.svg" alt="Menu" width={40} height={40} />
+            <PrefixedImage src="/images/Menu.svg" alt="Menu" width={40} height={40} />
           </button>
 
           <Link href="/" className="cursor-pointer">
-            <Image
+            <PrefixedImage
               src={scrolled ? '/images/logo-shrink.svg' : '/images/LogoWhite.svg'}
               alt="Logo"
               width={121}
@@ -80,7 +80,7 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
           </Link>
 
           <button className="cursor-pointer">
-            <Image src="/images/Ticket.svg" alt="Info" width={40} height={40} />
+            <PrefixedImage src="/images/Ticket.svg" alt="Info" width={40} height={40} />
           </button>
         </div>
 
@@ -88,7 +88,7 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
         <div className="hidden lg:flex w-full items-center ml-[60px] mr-[24px]">
           <div className="flex items-center">
             <Link href="/" className="cursor-pointer">
-              <Image
+              <PrefixedImage
                 src={scrolled ? '/images/logo-shrink.svg' : '/images/LogoWhite.svg'}
                 alt="Logo"
                 width={120}
@@ -150,10 +150,10 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
       >
         <div className="flex items-center justify-between max-h-[99px] px-6 py-6">
           <button onClick={() => setMenuOpen(false)}>
-            <Image src="/images/close.svg" alt="Close" width={28} height={28} />
+            <PrefixedImage src="/images/close.svg" alt="Close" width={28} height={28} />
           </button>
           <Link href="/" onClick={() => setMenuOpen(false)}>
-            <Image
+            <PrefixedImage
               src="/images/LogoAlBlack.svg"
               alt="Logo"
               width={121}
@@ -181,7 +181,12 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
                 className="flex justify-between py-6 border-b border-t border-gray-700"
               >
                 {item.text}{' '}
-                <Image src="/images/arrow-right.svg" alt="Arrow" width={13.3} height={13.3} />
+                <PrefixedImage
+                  src="/images/arrow-right.svg"
+                  alt="Arrow"
+                  width={13.3}
+                  height={13.3}
+                />
               </Link>
             ))}
         </nav>

@@ -8,7 +8,6 @@ import {
   useSitecoreContext,
   withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import Image from 'next/image';
 import { TextField } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
@@ -24,6 +23,7 @@ import {
 } from './Footer.types';
 import { useFooterForm } from './hooks/useFooterForm';
 import { FOOTER_TEXTFIELD_STYLES, SOCIAL_ICON_CONTAINER_CLASSES } from './Footer.constants';
+import PrefixedImage from 'features/shared/components/PrefixedImage';
 
 const Footer = (props: FooterProps): JSX.Element => {
   const footerData = props.navigationFolder?.datasource;
@@ -47,7 +47,7 @@ const Footer = (props: FooterProps): JSX.Element => {
             className="md:col-span-3 col-span-12"
           >
             <a href="/">
-              <Image
+              <PrefixedImage
                 src="/images/LogoAlBlack.svg"
                 alt="Al Ain Museum Logo"
                 width={171}
