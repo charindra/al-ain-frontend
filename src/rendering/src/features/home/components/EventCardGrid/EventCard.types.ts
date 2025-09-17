@@ -1,12 +1,17 @@
+import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+
 export type EventCardData = {
-  img: string;
-  tag: string;
-  title: string;
-  date: string;
-  btnText: string;
-  btnLink: string;
+  fields: {
+    img: ImageField;
+    tag: Field<string>;
+    title: Field<string>;
+    start_date: Field<string>;
+    end_date: Field<string>;
+    btnText: Field<string>;
+    btnLink: LinkField;
+  };
 };
 
-export type EventCardProps = {
-  data: EventCardData;
+export type EventCardFullProps = {
+  fields: EventCardData;
 };

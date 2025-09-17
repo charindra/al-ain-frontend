@@ -1,6 +1,13 @@
-import { EventCardData } from './EventCard.types';
+type SecondaryEventCard = {
+  img: string;
+  tag: string;
+  title: string;
+  date: string;
+  btnText: string;
+  btnLink: string;
+};
 
-export const SECONDARY_EVENT_CARDS: EventCardData[] = [
+export const SECONDARY_EVENT_CARDS: SecondaryEventCard[] = [
   {
     img: '/images/event-img-2.jpg',
     tag: 'WORKSHOP',

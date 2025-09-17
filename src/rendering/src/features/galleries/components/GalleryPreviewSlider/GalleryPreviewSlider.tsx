@@ -1,46 +1,20 @@
 'use client';
 
+import { Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import {
-  GALLERY_PREVIEW_SLIDES,
-  GALLERY_PREVIEW_THUMBNAILS,
-} from './GalleryPreviewSlider.constants';
-import type { GalleryPreviewSliderProps } from './GalleryPreviewSlider.types';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { GalleryItem, GalleryPreviewSliderProps } from './GalleryPreviewSlider.types';
 
-// interface FirstSlideItem {
-//   topHeading?: string;
-//   heading?: string;
-//   subHeading: string;
-//   origin?: string;
-//   material?: string;
-//   description?: string;
-//   img: string;
-//   galleryID: string;
-// }
-
-// interface SecondSlideItem {
-//   img: string;
-// }
-
-// type GalleryPreviewSliderProps = {
-//   slider1: FirstSlideItem[];
-//   slider2: SecondSlideItem[];
-//   galleryID?: string;
-// };
-
-const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Element => {
-  const { slides = GALLERY_PREVIEW_SLIDES, thumbnails = GALLERY_PREVIEW_THUMBNAILS } = props;
-  const router = useRouter();
+const GalleryPreviewSlider = (props: GalleryPreviewSliderProps): JSX.Element => {
   const searchParams = useSearchParams();
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
@@ -48,67 +22,59 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
   const [swiperReady, setSwiperReady] = useState(false);
   const mainSwiperRef = useRef<SwiperType | null>(null);
 
-  // Initialize slide from URL parameter (using galleryID)
+  // Bind data from Sitecore
+  const slider1: GalleryItem[] = props.fields.data.datasource.children.results.map((item) => ({
+    galleryID: item.name.value || 'gallery-' + Math.random().toString(36).substr(2, 5),
+    heading: item.heading?.value || 'Sample Heading',
+    subHeading: item.subHeading?.value || 'Sample Heading',
+    topHeading: item.subHeading?.value || 'Sample Top Heading',
+    description: item.description?.value || 'Sample description text goes here.',
+    descriptionTitle: item.descriptionTitle?.value || 'Description ',
+    originTitle: item.originTitle?.value || 'Origin',
+    origin: item.origin?.value || 'Sample Origin',
+    materialTitle: item.materialTitle?.value || 'Material',
+    material: item.material?.value || 'Sample Material',
+    img: item.img?.jsonValue?.value?.href
+      ? item.img.jsonValue.value.href.startsWith('/')
+        ? item.img.jsonValue.value.href
+        : '/' + item.img.jsonValue.value.href.split('/').filter(Boolean).join('/')
+      : '/images/cokkection-slider-1',
+  }));
+
+  // Use same data for thumbnails for simplicity
+  const slider2: GalleryItem[] = slider1;
+
+  // Initialize slide from URL parameter
   useEffect(() => {
     const slideParam = searchParams.get('slide');
     if (slideParam) {
-      // Convert underscores back to spaces for matching
       const normalizedSlideParam = slideParam.replace(/_/g, ' ');
-      const slideIndex = slides.findIndex((item) => item.galleryID === normalizedSlideParam);
+      const slideIndex = slider1.findIndex((item) => item.galleryID === normalizedSlideParam);
       if (slideIndex !== -1) {
         setActiveSlide(slideIndex);
       } else {
-        // Fallback to numeric index for backward compatibility
         const numericIndex = parseInt(slideParam, 10);
-        if (!isNaN(numericIndex) && numericIndex >= 0 && numericIndex < slides.length) {
+        if (!isNaN(numericIndex) && numericIndex >= 0 && numericIndex < slider1.length) {
           setActiveSlide(numericIndex);
         }
       }
     }
-  }, [searchParams, slides]);
-
-  // Initialize galleryID from URL parameter if not provided as prop
-  //   useEffect(() => {
-  //     const urlGalleryID = searchParams.get('galleryID');
-  //     if (urlGalleryID && !galleryID) {
-  //       // If galleryID is in URL but not provided as prop, you might want to handle this
-  //       // For now, we'll just use the prop value
-  //     }
-  //   }, [searchParams, galleryID]);
-
-  // Navigate to slide when swiper is ready and URL has slide parameter
-  useEffect(() => {
-    const slideParam = searchParams.get('slide');
-    if (slideParam && swiperReady && mainSwiperRef.current) {
-      // Convert underscores back to spaces for matching
-      const normalizedSlideParam = slideParam.replace(/_/g, ' ');
-      let slideIndex = slides.findIndex((item) => item.galleryID === normalizedSlideParam);
-
-      if (slideIndex === -1) {
-        // Fallback to numeric index for backward compatibility
-        slideIndex = parseInt(slideParam, 10);
-      }
-
-      if (slideIndex !== -1 && slideIndex >= 0 && slideIndex < slides.length) {
-        mainSwiperRef.current.slideTo(slideIndex);
-      }
-    }
-  }, [searchParams, swiperReady, slides]);
+  }, [searchParams, slider1]);
 
   const updateURL = (slideIndex: number) => {
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(window.location.search);
+    const currentSlide = slider1[slideIndex];
 
-    // Use galleryID if available, otherwise fallback to numeric index
-    const currentSlide = slides[slideIndex];
-    if (currentSlide?.galleryID) {
-      // Convert spaces to underscores for URL
-      const urlSafeGalleryID = currentSlide.galleryID.replace(/ /g, '_');
-      params.set('slide', urlSafeGalleryID);
+    if (currentSlide?.heading) {
+      // Convert heading to url-safe version
+      const urlSafeHeading = currentSlide.heading.replace(/\s+/g, '_');
+      params.set('slide', urlSafeHeading);
     } else {
       params.set('slide', slideIndex.toString());
     }
 
-    router.replace(`?${params.toString()}`, { scroll: false });
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({}, '', newUrl);
   };
 
   const handleSlideChange = (swiper: SwiperType) => {
@@ -150,13 +116,13 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
                     }}
                     viewport={{ once: true, amount: 0.2 }}
                   >
-                    <p
+                    <Text
+                      tag="p"
                       className={`text-[#1B1F27] text-[18px] leading-[24px] font-bold mb-[8px] transition-opacity duration-300 ${
                         isFading ? 'opacity-0' : 'opacity-100'
                       }`}
-                    >
-                      {slides[activeSlide]?.topHeading}
-                    </p>
+                      field={{ value: slider1[activeSlide]?.topHeading }}
+                    />
                   </motion.div>
 
                   <motion.div
@@ -169,13 +135,13 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
                     }}
                     viewport={{ once: true, amount: 0.2 }}
                   >
-                    <h2
+                    <Text
+                      tag="h2"
                       className={`text-[#1B1F27] text-[32px] lg:text-[48px] leading-[40px] lg:leading-[56px] font-medium heading-font mb-[8px] transition-opacity duration-300 ${
                         isFading ? 'opacity-0' : 'opacity-100'
                       }`}
-                    >
-                      {slides[activeSlide]?.heading}
-                    </h2>
+                      field={{ value: slider1[activeSlide]?.heading }}
+                    />
                   </motion.div>
 
                   <motion.div
@@ -188,13 +154,13 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
                     }}
                     viewport={{ once: true, amount: 0.2 }}
                   >
-                    <p
+                    <Text
+                      tag="p"
                       className={`text-[#1B1F27] text-[18px] leading-[24px] font-medium transition-opacity duration-300 ${
                         isFading ? 'opacity-0' : 'opacity-100'
                       }`}
-                    >
-                      {slides[activeSlide]?.subHeading}
-                    </p>
+                      field={{ value: slider1[activeSlide]?.subHeading }}
+                    />
                   </motion.div>
                 </div>
                 {/* mobile navigation */}
@@ -247,14 +213,18 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
                 }}
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-[16px] leading-[20px] text-[#1B1F27] mb-2 font-bold">Origin</p>
-                <p
+                <Text
+                  tag="p"
+                  className="text-[16px] leading-[20px] text-[#1B1F27] mb-2 font-bold"
+                  field={{ value: slider1[activeSlide]?.originTitle }}
+                />
+                <Text
+                  tag="p"
                   className={`text-[16px] leading-[20px] text-[#1B1F27] font-medium transition-opacity duration-300 ${
                     isFading ? 'opacity-0' : 'opacity-100'
                   }`}
-                >
-                  {slides[activeSlide]?.origin}
-                </p>
+                  field={{ value: slider1[activeSlide]?.origin }}
+                />
               </motion.div>
             </div>
             <div className="border-b border-[#D8D8D8] py-[17px] lg:py-6">
@@ -268,14 +238,18 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
                 }}
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-[16px] leading-[20px] text-[#1B1F27] mb-2 font-bold">Material</p>
-                <p
+                <Text
+                  tag="p"
+                  className="text-[16px] leading-[20px] text-[#1B1F27] mb-2 font-bold"
+                  field={{ value: slider1[activeSlide]?.materialTitle }}
+                />
+                <Text
+                  tag="p"
                   className={`text-[16px] leading-[20px] text-[#1B1F27] font-medium transition-opacity duration-300 ${
                     isFading ? 'opacity-0' : 'opacity-100'
                   }`}
-                >
-                  {slides[activeSlide]?.material}
-                </p>
+                  field={{ value: slider1[activeSlide]?.material }}
+                />
               </motion.div>
             </div>
             <div className="py-[17px] lg:py-6">
@@ -289,16 +263,18 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
                 }}
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <p className="text-[16px] leading-[20px] text-[#1B1F27] mb-2 font-bold">
-                  Description
-                </p>
-                <p
+                <Text
+                  tag="p"
+                  className="text-[16px] leading-[20px] text-[#1B1F27] mb-2 font-bold"
+                  field={{ value: slider1[activeSlide]?.descriptionTitle }}
+                />
+                <Text
+                  tag="p"
                   className={`text-[16px] leading-[20px] text-[#1B1F27] font-medium transition-opacity duration-300 ${
                     isFading ? 'opacity-0' : 'opacity-100'
                   }`}
-                >
-                  {slides[activeSlide]?.description}
-                </p>
+                  field={{ value: slider1[activeSlide]?.description }}
+                />
               </motion.div>
             </div>
 
@@ -341,10 +317,11 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
               onSwiper={(swiper) => {
                 mainSwiperRef.current = swiper;
                 setSwiperReady(true);
+                console.log('Swiper is ready:', swiperReady);
               }}
               onSlideChange={handleSlideChange}
             >
-              {slides.map((item, index1) => (
+              {slider1.map((item, index1) => (
                 <SwiperSlide key={index1}>
                   <div className="h-[659px]">
                     <motion.div
@@ -385,7 +362,7 @@ const GalleryPreviewSlider = (props: GalleryPreviewSliderProps = {}): JSX.Elemen
                   },
                 }}
               >
-                {thumbnails.map((item, index2) => (
+                {slider2.map((item, index2) => (
                   <SwiperSlide key={index2}>
                     <div
                       className="cursor-pointer transition-all duration-300"

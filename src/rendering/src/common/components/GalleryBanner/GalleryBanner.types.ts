@@ -1,4 +1,4 @@
-import { Field, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 
 export type MenuItem = {
   name: string;

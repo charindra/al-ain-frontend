@@ -13,25 +13,53 @@ export type TextWithImageItem = {
   bgColor?: string;
 };
 
-export type TextWithImageDatasourceItem = {
+export type TextImageBlockItem = {
   id: string;
   name: string;
   heading?: Field<string>;
   subHeading?: Field<string>;
   description?: Field<string>;
-  img?: Field<string>;
-  isRightImg?: Field<string>;
-  lightBack?: Field<string>;
-  btnText?: Field<string>;
-  btnLink?: Field<string>;
-};
-
-export type TextWithImageBlockResponse = {
-  data: {
-    datasource: {
-      children: {
-        results: TextWithImageDatasourceItem[];
+  img?: {
+    jsonValue?: {
+      value?: {
+        href?: string;
       };
     };
   };
+  isRightImg?: Field<string>;
+  lightBack?: Field<string>;
+  btnText?: Field<string>;
+  btnLink?: {
+    jsonValue?: {
+      value?: {
+        href: string;
+      };
+    };
+  };
+};
+export type TextImageBlockItemProps = {
+  data?: TextImageBlockItem;
+};
+
+export type TextImageBlockResponse = {
+  data?: {
+    datasource: {
+      children: {
+        results: TextImageBlockItem[];
+      };
+    };
+  };
+  fields?: {
+    data: {
+      datasource: {
+        children: {
+          results: TextImageBlockItem[];
+        };
+      };
+    };
+  };
+};
+
+export type TextImageBlockResponseProps = {
+  fields: TextImageBlockResponse['data' | 'fields'];
 };

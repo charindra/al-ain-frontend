@@ -5,7 +5,7 @@ export const heroBannerStyles = `
     gap: 8px;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 24px;
   }
 
   .swiper-pagination-bullet {

@@ -7,7 +7,7 @@ export const mapToBreadcrumb = (data?: GalleryBannerData): MenuItem[] => {
 
   return data.children.results.map((child, index, array) => ({
     name: child.name as unknown as string,
-    link: child.link.value?.href ?? '#',
+    link: child.link.jsonValue?.value?.href ?? '',
     isCurrent: index === array.length - 1,
   }));
 };

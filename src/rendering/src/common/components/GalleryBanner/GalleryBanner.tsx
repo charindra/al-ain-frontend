@@ -1,4 +1,4 @@
-import { Field, Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GalleryBannerProps } from './GalleryBanner.types';
@@ -26,9 +26,11 @@ const GalleryBanner = (props: GalleryBannerProps): JSX.Element => {
             </div>
             <div>
               {data?.description?.value?.trim() && (
-                <p className="text-white text-[18px] leading-[24px] font-bold uppercase">
-                  {data.description.value}
-                </p>
+                <Text
+                  tag="p"
+                  className="text-white text-[18px] leading-[24px] font-bold uppercase"
+                  field={{ value: data.description.value }}
+                />
               )}
             </div>
           </div>

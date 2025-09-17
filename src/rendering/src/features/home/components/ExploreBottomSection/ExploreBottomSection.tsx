@@ -76,7 +76,7 @@ const ExploreBottomSection = (props: ExploreBottomSectionProps): JSX.Element => 
                 <RichText
                   tag="p"
                   field={props?.fields?.description}
-                  className="relative text-[18px] lg:text-[20px] leading-[24px] lg:leading-[28px] font-light lg:font-medium text-white mb-8 z-[2]"
+                  className="relative text-[18px] lg:text-[20px] leading-[32px] lg:leading-[32px] font-light lg:font-medium text-white mb-8 z-[2]"
                 />
               </motion.div>
 

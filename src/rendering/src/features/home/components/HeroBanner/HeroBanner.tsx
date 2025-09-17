@@ -49,7 +49,7 @@ const HeroBanner = (props: HeroBannerProps): JSX.Element => {
 
         <div className="absolute bottom-16 ltr:left-0 rtl:right-0 home-banner-overlay change-direction">
           <div className="block mx-auto w-full lg:w-[83.1%] px-4 md:px-6 lg:px-0">
-            <div className="mb-4 z-[1] relative">
+            <div className="mb-4 z-[1] relative pointer-events-none">
               <Text
                 tag="h2"
                 className="text-[18px] leading-[24px] font-bold uppercase change-direction text-white"
@@ -60,7 +60,7 @@ const HeroBanner = (props: HeroBannerProps): JSX.Element => {
 
             <Text
               tag="h1"
-              className="text-white text-[40px] leading-[48px] lg:text-[56px] lg:leading-[72px] xl:text-[72px] xl:leading-[88px] font-medium heading-font uppercase mb-4 z-[1] relative"
+              className="text-white text-[40px] leading-[48px] lg:text-[56px] lg:leading-[72px] xl:text-[72px] xl:leading-[88px] font-medium heading-font uppercase mb-4 z-[1] relative pointer-events-none"
               field={data?.heading}
             />
 
