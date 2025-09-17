@@ -44,7 +44,13 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
     document.documentElement.dir = dir;
   }, [locale]);
 
-  const isActive = (href: string) => pathname.startsWith(href);
+  // active link
+  const stripLocale = (url: string) => url.replace(/^\/(en|ar-ae)/, '');
+  const isActive = (href: string) => {
+    const cleanHref = stripLocale(href);
+    const cleanPath = stripLocale(pathname);
+    return cleanPath === cleanHref || cleanPath.startsWith(cleanHref + '/');
+  };
 
   return (
     <header
@@ -60,7 +66,7 @@ const TopNavigation = (props: TopNavigationProps): JSX.Element => {
         {/* ---------- Mobile View ---------- */}
         <div className="flex w-full items-center justify-between lg:hidden ml-[16px] mr-[16px]">
           <button onClick={() => setMenuOpen(true)} className="cursor-pointer">
-            <Image src="/images/Menu.svg" alt="Menu" width={35} height={35} />
+            <Image src="/images/Menu.svg" alt="Menu" width={40} height={40} />
           </button>
 
           <Link href="/" className="cursor-pointer">

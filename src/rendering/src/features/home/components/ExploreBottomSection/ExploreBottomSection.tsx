@@ -52,7 +52,7 @@ const ExploreBottomSection = (props: ExploreBottomSectionProps): JSX.Element => 
               >
                 <Text
                   tag="h3"
-                  className="relative text-[32px] xl:text-[48px] leading-[40px] xl:leading-[56px] font-medium change-direction heading-font text-white z-[2] mt-0 md:mt-[-20px] mb-8 md:mb-0"
+                  className="relative text-[32px] xl:text-[48px] leading-[40px] xl:leading-[56px] font-medium change-direction heading-font text-white z-[2] mt-0 md:mt-[-20px] mb-8 md:mb-0  max-w-[320px]"
                   field={props?.fields?.heading}
                 />
               </motion.div>

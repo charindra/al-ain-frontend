@@ -85,6 +85,16 @@ const Footer = (props: FooterProps): JSX.Element => {
                 label="Your Name"
                 fullWidth
                 {...register('name', { required: 'Name is required' })}
+                slotProps={{
+                  inputLabel:
+                    document?.dir === 'rtl'
+                      ? { sx: { textAlign: 'right', right: 0, left: 'auto', direction: 'rtl' } }
+                      : {},
+                  input:
+                    document?.dir === 'rtl'
+                      ? { style: { textAlign: 'right', direction: 'rtl' } }
+                      : {},
+                }}
                 sx={FOOTER_TEXTFIELD_STYLES}
               />
 
@@ -100,6 +110,16 @@ const Footer = (props: FooterProps): JSX.Element => {
                     message: 'Invalid email address',
                   },
                 })}
+                slotProps={{
+                  inputLabel:
+                    document?.dir === 'rtl'
+                      ? { sx: { textAlign: 'right', right: 0, left: 'auto', direction: 'rtl' } }
+                      : {},
+                  input:
+                    document?.dir === 'rtl'
+                      ? { style: { textAlign: 'right', direction: 'rtl' } }
+                      : {},
+                }}
                 sx={FOOTER_TEXTFIELD_STYLES}
               />
               <button
